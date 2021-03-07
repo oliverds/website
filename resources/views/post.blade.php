@@ -23,7 +23,7 @@
             </header>
 
             <p class="text-center text-base text-gray-500">
-                {{ $post->published_at->format('M n, Y') }}
+                {{ $post->published_at->format('F j, Y') }}
             </p>
 
             <h2 class="text-5xl font-bold text-center leading-none mt-3">
