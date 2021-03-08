@@ -47,5 +47,23 @@
                 @endforeach
             </section>
         </main>
+
+        @production
+            <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+            <script>
+            (function(f, a, t, h, o, m){
+                a[h]=a[h]||function(){
+                    (a[h].q=a[h].q||[]).push(arguments)
+                };
+                o=f.createElement('script'),
+                m=f.getElementsByTagName('script')[0];
+                o.async=1; o.src=t; o.id='fathom-script';
+                m.parentNode.insertBefore(o,m)
+            })(document, window, '//fathom.radiocubito.com/tracker.js', 'fathom');
+            fathom('set', 'siteId', 'BNRLG');
+            fathom('trackPageview');
+            </script>
+            <!-- / Fathom -->
+        @endproduction
     </body>
 </html>
