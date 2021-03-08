@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b3daa75430ec1541425225dc1e97a06",
+    "content-hash": "6b2f779813b2c5a1f23dcbbf50e1c0f5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3541,16 +3541,16 @@
         },
         {
             "name": "radiocubito/laravel-contentful",
-            "version": "v0.1.0",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/radiocubito/laravel-contentful.git",
-                "reference": "63201c974941093b592bade261db35bcbc541369"
+                "reference": "51eb62a8434ef685b9eb5987ac223b9fb39155ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/radiocubito/laravel-contentful/zipball/63201c974941093b592bade261db35bcbc541369",
-                "reference": "63201c974941093b592bade261db35bcbc541369",
+                "url": "https://api.github.com/repos/radiocubito/laravel-contentful/zipball/51eb62a8434ef685b9eb5987ac223b9fb39155ac",
+                "reference": "51eb62a8434ef685b9eb5987ac223b9fb39155ac",
                 "shasum": ""
             },
             "require": {
@@ -3601,7 +3601,7 @@
             ],
             "support": {
                 "issues": "https://github.com/radiocubito/laravel-contentful/issues",
-                "source": "https://github.com/radiocubito/laravel-contentful/tree/v0.1.0"
+                "source": "https://github.com/radiocubito/laravel-contentful/tree/v0.2.0"
             },
             "funding": [
                 {
@@ -3609,7 +3609,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-07T15:33:17+00:00"
+            "time": "2021-03-08T00:42:24+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
