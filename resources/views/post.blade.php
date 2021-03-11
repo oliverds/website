@@ -16,21 +16,21 @@
         <header class="my-12 text-center">
             <a href="/">
                 <img class="h-12 w-12 rounded-full mx-auto mb-1" src="{{ $author->profile_photo_url }}">
-                <h1 class="text-base tracking-widest uppercase text-gray-500">{{ $author->name }}</h1>
+                <h1 class="text-sm lg:text-base tracking-widest uppercase text-gray-500">{{ $author->name }}</h1>
             </a>
         </header>
 
-        <p class="text-center text-base text-gray-500">
+        <p class="text-center text-sm lg:text-base text-gray-500">
             {{ $post->published_at->format('F j, Y') }}
         </p>
 
-        <h2 class="text-5xl font-bold text-center leading-none mt-3">
+        <h2 class="text-4xl lg:text-5xl font-bold text-center leading-none mt-3">
             {{ $post->title }}
         </h2>
 
         <section class="mt-12">
             <article>
-                <div class="prose prose-xl">
+                <div class="leading-snug prose prose-lg lg:prose-xl">
                     {!! $post->html !!}
                 </div>
             </article>
