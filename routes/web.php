@@ -22,6 +22,16 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
+Route::get('/feed', function () {
+    $content = view('feed', [
+        'author' => User::first(),
+        'posts' => Post::published()->ofType('post')->orderBy('published_at', 'desc')->get(),
+    ]);
+
+    return response($content, 200)
+        ->header('Content-Type', 'text/xml');
+})->name('feed');
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
