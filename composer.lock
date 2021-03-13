@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccc7c6361fc5e383fde756b722541b0b",
+    "content-hash": "513f80bfbee905ebe90dd327d38547cd",
     "packages": [
         {
             "name": "asm89/stack-cors",
-            "version": "v2.0.2",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/asm89/stack-cors.git",
-                "reference": "8d8f88b3b3830916be94292c1fbce84433efb1aa"
+                "reference": "9cb795bf30988e8c96dd3c40623c48a877bc6714"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/asm89/stack-cors/zipball/8d8f88b3b3830916be94292c1fbce84433efb1aa",
-                "reference": "8d8f88b3b3830916be94292c1fbce84433efb1aa",
+                "url": "https://api.github.com/repos/asm89/stack-cors/zipball/9cb795bf30988e8c96dd3c40623c48a877bc6714",
+                "reference": "9cb795bf30988e8c96dd3c40623c48a877bc6714",
                 "shasum": ""
             },
             "require": {
@@ -58,22 +58,22 @@
             ],
             "support": {
                 "issues": "https://github.com/asm89/stack-cors/issues",
-                "source": "https://github.com/asm89/stack-cors/tree/v2.0.2"
+                "source": "https://github.com/asm89/stack-cors/tree/v2.0.3"
             },
-            "time": "2020-10-29T16:03:21+00:00"
+            "time": "2021-03-11T06:42:03+00:00"
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.173.26",
+            "version": "3.173.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "cba5301aabe7f8bfac60a1ac2710b3fb25512d6c"
+                "reference": "593baa5930896bb443c437032daf4016e1e3878d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/cba5301aabe7f8bfac60a1ac2710b3fb25512d6c",
-                "reference": "cba5301aabe7f8bfac60a1ac2710b3fb25512d6c",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/593baa5930896bb443c437032daf4016e1e3878d",
+                "reference": "593baa5930896bb443c437032daf4016e1e3878d",
                 "shasum": ""
             },
             "require": {
@@ -148,9 +148,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.173.26"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.173.28"
             },
-            "time": "2021-03-10T19:18:24+00:00"
+            "time": "2021-03-12T19:29:55+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -3540,17 +3540,17 @@
             "time": "2021-01-18T15:53:43+00:00"
         },
         {
-            "name": "radiocubito/laravel-contentful",
-            "version": "v0.3.1",
+            "name": "radiocubito/laravel-wordful",
+            "version": "v0.5.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/radiocubito/laravel-contentful.git",
-                "reference": "f6bcab6ff1b115a082aaca03dc1c6c07c3f8c902"
+                "url": "https://github.com/radiocubito/laravel-wordful.git",
+                "reference": "3f29a268212bef478b078d9f16a482948db47f20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/radiocubito/laravel-contentful/zipball/f6bcab6ff1b115a082aaca03dc1c6c07c3f8c902",
-                "reference": "f6bcab6ff1b115a082aaca03dc1c6c07c3f8c902",
+                "url": "https://api.github.com/repos/radiocubito/laravel-wordful/zipball/3f29a268212bef478b078d9f16a482948db47f20",
+                "reference": "3f29a268212bef478b078d9f16a482948db47f20",
                 "shasum": ""
             },
             "require": {
@@ -3569,17 +3569,17 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Radiocubito\\Contentful\\ContentfulServiceProvider"
+                        "Radiocubito\\Wordful\\WordfulServiceProvider"
                     ],
                     "aliases": {
-                        "Contentful": "Radiocubito\\Contentful\\ContentfulFacade"
+                        "Wordful": "Radiocubito\\Wordful\\WordfulFacade"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Radiocubito\\Contentful\\": "src",
-                    "Radiocubito\\Contentful\\Database\\Factories\\": "database/factories"
+                    "Radiocubito\\Wordful\\": "src",
+                    "Radiocubito\\Wordful\\Database\\Factories\\": "database/factories"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3593,15 +3593,15 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Contentful – Just a simple blog package for Laravel.",
-            "homepage": "https://github.com/radiocubito/laravel-contentful",
+            "description": "Wordful – Just a simple blog package for Laravel.",
+            "homepage": "https://github.com/radiocubito/laravel-wordful",
             "keywords": [
-                "laravel-contentful",
+                "laravel-wordful",
                 "radiocubito"
             ],
             "support": {
-                "issues": "https://github.com/radiocubito/laravel-contentful/issues",
-                "source": "https://github.com/radiocubito/laravel-contentful/tree/v0.3.1"
+                "issues": "https://github.com/radiocubito/laravel-wordful/issues",
+                "source": "https://github.com/radiocubito/laravel-wordful/tree/v0.5.0"
             },
             "funding": [
                 {
@@ -3609,7 +3609,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-10T23:03:31+00:00"
+            "time": "2021-03-13T18:13:27+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -3882,16 +3882,16 @@
         },
         {
             "name": "spatie/laravel-package-tools",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "faabcdf71fb12be35dbd2376d4f10e12ed2551ab"
+                "reference": "c190a294db3a10a14e27db67cd286c3ce10c8277"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/faabcdf71fb12be35dbd2376d4f10e12ed2551ab",
-                "reference": "faabcdf71fb12be35dbd2376d4f10e12ed2551ab",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/c190a294db3a10a14e27db67cd286c3ce10c8277",
+                "reference": "c190a294db3a10a14e27db67cd286c3ce10c8277",
                 "shasum": ""
             },
             "require": {
@@ -3930,7 +3930,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.5.0"
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.6.0"
             },
             "funding": [
                 {
@@ -3938,7 +3938,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-10T11:35:17+00:00"
+            "time": "2021-03-12T12:08:43+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
