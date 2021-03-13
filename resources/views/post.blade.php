@@ -35,5 +35,13 @@
                 </div>
             </article>
         </section>
+
+        <footer class="mt-12 text-center">
+            <p class="text-sm text-gray-500 mt-4 mb-3">
+                <a href="https://wordful.radiocubito.com">Published with Wordful</a>
+                <span aria-hidden="true"> · </span>
+                <a href="{{ route('feed') }}">Grab the RSS feed</a>
+            </p>
+        </footer>
     </main>
 </x-layout>
