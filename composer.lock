@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "513f80bfbee905ebe90dd327d38547cd",
+    "content-hash": "5ed2518caf7e799c89364cf14340fd57",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3541,16 +3541,16 @@
         },
         {
             "name": "radiocubito/laravel-wordful",
-            "version": "v0.5.0",
+            "version": "v0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/radiocubito/laravel-wordful.git",
-                "reference": "3f29a268212bef478b078d9f16a482948db47f20"
+                "reference": "cd81c739ebb728970a6cb4f0e7df093adf596c80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/radiocubito/laravel-wordful/zipball/3f29a268212bef478b078d9f16a482948db47f20",
-                "reference": "3f29a268212bef478b078d9f16a482948db47f20",
+                "url": "https://api.github.com/repos/radiocubito/laravel-wordful/zipball/cd81c739ebb728970a6cb4f0e7df093adf596c80",
+                "reference": "cd81c739ebb728970a6cb4f0e7df093adf596c80",
                 "shasum": ""
             },
             "require": {
@@ -3601,7 +3601,7 @@
             ],
             "support": {
                 "issues": "https://github.com/radiocubito/laravel-wordful/issues",
-                "source": "https://github.com/radiocubito/laravel-wordful/tree/v0.5.0"
+                "source": "https://github.com/radiocubito/laravel-wordful/tree/v0.6.0"
             },
             "funding": [
                 {
@@ -3609,7 +3609,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-13T18:13:27+00:00"
+            "time": "2021-03-13T21:52:04+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
