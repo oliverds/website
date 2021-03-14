@@ -13,14 +13,26 @@
     </x-slot>
 
     <main class="p-4 max-w-3xl mx-auto">
-        <header class="my-12 text-center">
+        <header class="mt-12 text-center">
             <a href="/">
                 <img class="h-12 w-12 rounded-full mx-auto mb-1" src="{{ $author->profile_photo_url }}">
                 <h1 class="text-sm lg:text-base tracking-widest uppercase text-gray-500">{{ $author->name }}</h1>
             </a>
         </header>
 
-        <section class="space-y-6">
+        <section class="mt-12 text-center">
+            <p class="text-gray-500 mt-4 mb-3">
+                <a href="/now">Now</a>
+                <span aria-hidden="true"> · </span>
+                <a href="https://twitter.com/olrjs">Twitter</a>
+                <span aria-hidden="true"> · </span>
+                <a href="https://github.com/oliverds/">Github</a>
+                <span aria-hidden="true"> · </span>
+                <a href="/contact">Contact</a>
+            </p>
+        </section>
+
+        <section class="mt-12 space-y-6">
             @foreach ($posts as $post)
                 <article class="pt-6 px-6 pb-16 lg:pt-10 lg:px-10 lg:pb-24 border rounded shadow-lg relative">
                     <header>
