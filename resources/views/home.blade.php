@@ -21,7 +21,7 @@
         </header>
 
         <section class="mt-12 text-center">
-            <p class="text-gray-500 mt-4 mb-3">
+            <p class="text-sm lg:text-base text-gray-500 mt-4 mb-3">
                 <a href="/now">Now</a>
                 <span aria-hidden="true"> · </span>
                 <a href="https://twitter.com/olrjs">Twitter</a>
@@ -29,6 +29,8 @@
                 <a href="https://github.com/oliverds/">Github</a>
                 <span aria-hidden="true"> · </span>
                 <a href="/contact">Contact</a>
+                <span aria-hidden="true"> · </span>
+                <a href="{{ route('feed') }}">RSS feed</a>
             </p>
         </section>
 
