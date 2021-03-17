@@ -36,6 +36,10 @@
             </article>
         </section>
 
+        <section class="mt-12">
+            @include('_subscribe')
+        </section>
+
         <footer class="mt-12 text-center">
             <p class="text-sm text-gray-500 mt-4 mb-3">
                 <a href="https://wordful.radiocubito.com">Published with Wordful</a>

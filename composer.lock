@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ed2518caf7e799c89364cf14340fd57",
+    "content-hash": "9d34b3cccafbb2c0342fc21a27202c1f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -64,16 +64,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.173.28",
+            "version": "3.174.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "593baa5930896bb443c437032daf4016e1e3878d"
+                "reference": "b481fd0dab83b9ed6eab35279e1a43e3a875c87e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/593baa5930896bb443c437032daf4016e1e3878d",
-                "reference": "593baa5930896bb443c437032daf4016e1e3878d",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/b481fd0dab83b9ed6eab35279e1a43e3a875c87e",
+                "reference": "b481fd0dab83b9ed6eab35279e1a43e3a875c87e",
                 "shasum": ""
             },
             "require": {
@@ -148,9 +148,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.173.28"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.174.1"
             },
-            "time": "2021-03-12T19:29:55+00:00"
+            "time": "2021-03-16T18:18:56+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -1403,16 +1403,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.32.1",
+            "version": "v8.33.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7c37b64f8153c16b6406f5c28cf37828ebbe8846"
+                "reference": "354c57b8cb457549114074c500944455a288d6cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7c37b64f8153c16b6406f5c28cf37828ebbe8846",
-                "reference": "7c37b64f8153c16b6406f5c28cf37828ebbe8846",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/354c57b8cb457549114074c500944455a288d6cc",
+                "reference": "354c57b8cb457549114074c500944455a288d6cc",
                 "shasum": ""
             },
             "require": {
@@ -1567,7 +1567,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-03-09T15:37:45+00:00"
+            "time": "2021-03-16T19:42:32+00:00"
         },
         {
             "name": "laravel/jetstream",
@@ -1770,16 +1770,16 @@
         },
         {
             "name": "laravel/vapor-core",
-            "version": "v2.10.1",
+            "version": "v2.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/vapor-core.git",
-                "reference": "8ac2da4eea1f1c2db83fa629b46d4311458b3f29"
+                "reference": "a5b824d4621cfb68df493b3f790f5ed24b5a6038"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/vapor-core/zipball/8ac2da4eea1f1c2db83fa629b46d4311458b3f29",
-                "reference": "8ac2da4eea1f1c2db83fa629b46d4311458b3f29",
+                "url": "https://api.github.com/repos/laravel/vapor-core/zipball/a5b824d4621cfb68df493b3f790f5ed24b5a6038",
+                "reference": "a5b824d4621cfb68df493b3f790f5ed24b5a6038",
                 "shasum": ""
             },
             "require": {
@@ -1835,9 +1835,9 @@
                 "vapor"
             ],
             "support": {
-                "source": "https://github.com/laravel/vapor-core/tree/v2.10.1"
+                "source": "https://github.com/laravel/vapor-core/tree/v2.10.2"
             },
-            "time": "2020-12-29T15:06:52+00:00"
+            "time": "2021-03-16T13:58:34+00:00"
         },
         {
             "name": "laravel/vapor-ui",
@@ -3465,16 +3465,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.10.6",
+            "version": "v0.10.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "6f990c19f91729de8b31e639d6e204ea59f19cf3"
+                "reference": "a395af46999a12006213c0c8346c9445eb31640c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/6f990c19f91729de8b31e639d6e204ea59f19cf3",
-                "reference": "6f990c19f91729de8b31e639d6e204ea59f19cf3",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/a395af46999a12006213c0c8346c9445eb31640c",
+                "reference": "a395af46999a12006213c0c8346c9445eb31640c",
                 "shasum": ""
             },
             "require": {
@@ -3535,22 +3535,22 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.10.6"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.10.7"
             },
-            "time": "2021-01-18T15:53:43+00:00"
+            "time": "2021-03-14T02:14:56+00:00"
         },
         {
             "name": "radiocubito/laravel-wordful",
-            "version": "v0.6.0",
+            "version": "v0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/radiocubito/laravel-wordful.git",
-                "reference": "cd81c739ebb728970a6cb4f0e7df093adf596c80"
+                "reference": "e1cf4b5d941bf10f8ec213d39a0b3ebde7931f8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/radiocubito/laravel-wordful/zipball/cd81c739ebb728970a6cb4f0e7df093adf596c80",
-                "reference": "cd81c739ebb728970a6cb4f0e7df093adf596c80",
+                "url": "https://api.github.com/repos/radiocubito/laravel-wordful/zipball/e1cf4b5d941bf10f8ec213d39a0b3ebde7931f8d",
+                "reference": "e1cf4b5d941bf10f8ec213d39a0b3ebde7931f8d",
                 "shasum": ""
             },
             "require": {
@@ -3596,12 +3596,14 @@
             "description": "Wordful – Just a simple blog package for Laravel.",
             "homepage": "https://github.com/radiocubito/laravel-wordful",
             "keywords": [
-                "laravel-wordful",
+                "blogging",
+                "laravel",
+                "publishing",
                 "radiocubito"
             ],
             "support": {
                 "issues": "https://github.com/radiocubito/laravel-wordful/issues",
-                "source": "https://github.com/radiocubito/laravel-wordful/tree/v0.6.0"
+                "source": "https://github.com/radiocubito/laravel-wordful/tree/v0.7.0"
             },
             "funding": [
                 {
@@ -3609,7 +3611,95 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-13T21:52:04+00:00"
+            "time": "2021-03-16T02:47:41+00:00"
+        },
+        {
+            "name": "radiocubito/laravel-wordful-pro",
+            "version": "v0.0.3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:radiocubito/laravel-wordful-pro.git",
+                "reference": "e65bb91bae06a525ff63bd1231c075f13865fcf1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/radiocubito/laravel-wordful-pro/zipball/e65bb91bae06a525ff63bd1231c075f13865fcf1",
+                "reference": "e65bb91bae06a525ff63bd1231c075f13865fcf1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.0",
+                "livewire/livewire": "^2.4",
+                "php": "^7.4|^8.0",
+                "radiocubito/laravel-wordful": "^0.7.0",
+                "spatie/laravel-package-tools": "^1.4.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.13",
+                "phpunit/phpunit": "^9.3",
+                "spatie/laravel-ray": "^1.9",
+                "vimeo/psalm": "^4.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Radiocubito\\WordfulPro\\WordfulProServiceProvider"
+                    ],
+                    "aliases": {
+                        "WordfulPro": "Radiocubito\\WordfulPro\\WordfulProFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Radiocubito\\WordfulPro\\": "src",
+                    "Radiocubito\\WordfulPro\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Radiocubito\\WordfulPro\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "psalm": [
+                    "vendor/bin/psalm"
+                ],
+                "test": [
+                    "vendor/bin/phpunit --colors=always"
+                ],
+                "test-coverage": [
+                    "vendor/bin/phpunit --coverage-html coverage"
+                ]
+            },
+            "license": [
+                "Commercial"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Jimenez-Servin",
+                    "email": "oliver@radiocubito.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "laravel-wordful-pro",
+            "homepage": "https://github.com/radiocubito/laravel-wordful-pro",
+            "keywords": [
+                "laravel-wordful-pro",
+                "radiocubito"
+            ],
+            "support": {
+                "source": "https://github.com/radiocubito/laravel-wordful-pro/tree/v0.0.3",
+                "issues": "https://github.com/radiocubito/laravel-wordful-pro/issues"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/radiocubito"
+                }
+            ],
+            "time": "2021-03-17T00:07:10+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -3882,16 +3972,16 @@
         },
         {
             "name": "spatie/laravel-package-tools",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "c190a294db3a10a14e27db67cd286c3ce10c8277"
+                "reference": "a846cc8503ea3a1972650baf25686e6ec43d509f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/c190a294db3a10a14e27db67cd286c3ce10c8277",
-                "reference": "c190a294db3a10a14e27db67cd286c3ce10c8277",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/a846cc8503ea3a1972650baf25686e6ec43d509f",
+                "reference": "a846cc8503ea3a1972650baf25686e6ec43d509f",
                 "shasum": ""
             },
             "require": {
@@ -3930,7 +4020,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.6.0"
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.6.1"
             },
             "funding": [
                 {
@@ -3938,7 +4028,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-12T12:08:43+00:00"
+            "time": "2021-03-16T19:49:42+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -6860,16 +6950,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.9.2",
+            "version": "2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "df7933820090489623ce0be5e85c7e693638e536"
+                "reference": "6ecda5217bf048088b891f7403b262906be5a957"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/df7933820090489623ce0be5e85c7e693638e536",
-                "reference": "df7933820090489623ce0be5e85c7e693638e536",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/6ecda5217bf048088b891f7403b262906be5a957",
+                "reference": "6ecda5217bf048088b891f7403b262906be5a957",
                 "shasum": ""
             },
             "require": {
@@ -6919,7 +7009,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.9.2"
+                "source": "https://github.com/filp/whoops/tree/2.10.0"
             },
             "funding": [
                 {
@@ -6927,20 +7017,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-01-24T12:00:00+00:00"
+            "time": "2021-03-16T12:00:00+00:00"
         },
         {
             "name": "laravel/sail",
-            "version": "v1.4.7",
+            "version": "v1.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "c57927e1e3919a317034ff706c684f01f15c10d8"
+                "reference": "66b26181c3e86266b0b98f45a3398b090f37dee9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/c57927e1e3919a317034ff706c684f01f15c10d8",
-                "reference": "c57927e1e3919a317034ff706c684f01f15c10d8",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/66b26181c3e86266b0b98f45a3398b090f37dee9",
+                "reference": "66b26181c3e86266b0b98f45a3398b090f37dee9",
                 "shasum": ""
             },
             "require": {
@@ -6987,7 +7077,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2021-03-09T19:15:10+00:00"
+            "time": "2021-03-16T16:28:57+00:00"
         },
         {
             "name": "myclabs/deep-copy",

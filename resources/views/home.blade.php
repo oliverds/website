@@ -34,6 +34,10 @@
             </p>
         </section>
 
+        <section class="mt-12">
+            @include('_subscribe')
+        </section>
+
         <section class="mt-12 space-y-6">
             @foreach ($posts as $post)
                 <article class="pt-6 px-6 pb-16 lg:pt-10 lg:px-10 lg:pb-24 border rounded shadow-lg relative">
