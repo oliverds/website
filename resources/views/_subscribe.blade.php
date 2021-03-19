@@ -1,15 +1,17 @@
-<div class="p-6 mx-auto text-center rounded shadow-lg sm:p-8 max-w-lg border">
-    <form action="{{ route('wordful-pro.subscribers.store') }}" method="POST">
+<div class="py-6 lg:py-10 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
+    <p class="text-base lg:text-lg text-gray-900 font-semibold">
+        Subscribe to get by email future posts or grab the
+        <a href="{{ route('feed') }}" class="underline">RSS feed</a>.
+    </p>
+    <form action="{{ route('wordful-pro.subscribers.store') }}" method="POST" class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
         @csrf
 
-        <label for="email" class="font-bold">
-            Subscribe below to get future posts from <span class="whitespace-nowrap">{{ config('app.name') }}</span>
-        </label>
-
-        <div class="flex mt-2">
-            <input type="email" name="email" placeholder="Type your email…" required class="rounded-full rounded-r border-r-0 py-2 px-4 w-full border-gray-200" />
-
-            <button class="rounded-full rounded-l border bg-gray-100 px-4 py-2 border-gray-200">
+        <div>
+            <label for="email" class="sr-only">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required="" class="appearance-none w-full px-4 py-2 border border-gray-300 text-base rounded-full text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:ring-gray-500 focus:border-gray-500 lg:max-w-xs" placeholder="Enter your email">
+        </div>
+        <div class="mt-2 flex-shrink-0 w-full flex rounded-full shadow-sm sm:mt-0 sm:ml-3 sm:w-auto sm:inline-flex">
+            <button class="w-full bg-white px-4 py-2 border border-gray-300 rounded-full flex items-center justify-center text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:w-auto sm:inline-flex">
                 Subscribe
             </button>
         </div>

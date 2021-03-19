@@ -13,18 +13,13 @@
     </x-slot>
 
     <main class="p-4 max-w-3xl mx-auto">
-        <header class="my-12 text-center">
-            <a href="/">
-                <img class="h-12 w-12 rounded-full mx-auto mb-1" src="{{ $author->profile_photo_url }}">
-                <h1 class="text-sm lg:text-base tracking-widest uppercase text-gray-500">{{ $author->name }}</h1>
-            </a>
-        </header>
+        @include('_header')
 
-        <p class="text-center text-sm lg:text-base text-gray-500">
-            {{ $post->published_at->format('F j, Y') }}
+        <p class="text-center text-sm lg:text-base text-gray-500 font-mono mt-12">
+            <time datetime="{{ $post->published_at->format('Y-m-d') }}">{{ $post->published_at->format('F j, Y') }}</time>
         </p>
 
-        <h2 class="text-4xl lg:text-5xl font-bold text-center leading-none mt-3">
+        <h2 class="text-4xl lg:text-5xl font-bold text-center leading-none mt-2">
             {{ $post->title }}
         </h2>
 
@@ -40,12 +35,6 @@
             @include('_subscribe')
         </section>
 
-        <footer class="mt-12 text-center">
-            <p class="text-sm text-gray-500 mt-4 mb-3">
-                <a href="https://wordful.radiocubito.com">Published with Wordful</a>
-                <span aria-hidden="true"> · </span>
-                <a href="{{ route('feed') }}">Grab the RSS feed</a>
-            </p>
-        </footer>
+        @include('_footer')
     </main>
 </x-layout>
