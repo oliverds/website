@@ -3,7 +3,7 @@
         Subscribe to get by email future posts or grab the
         <a href="{{ route('feed') }}" class="underline">RSS feed</a>.
     </p>
-    <form action="{{ route('wordful-pro.subscribers.store') }}" method="POST" class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
+    <form action="{{ route('wordful.subscribers.store') }}" method="POST" class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
         @csrf
 
         <div>
