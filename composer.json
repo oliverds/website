@@ -20,8 +20,7 @@
         "laravel/vapor-ui": "^1.0",
         "league/flysystem-aws-s3-v3": "^1.0",
         "livewire/livewire": "^2.0",
-        "radiocubito/laravel-wordful": "^0.9.0",
-        "radiocubito/laravel-wordful-pro": "^0.0.6"
+        "radiocubito/laravel-wordful": "^0.10.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -70,8 +69,5 @@
             "@php artisan vapor-ui:publish --ansi",
             "@php artisan wordful:publish --ansi"
         ]
-    },
-    "repositories": [
-        { "type": "vcs", "url": "https://github.com/radiocubito/laravel-wordful-pro" }
-    ]
+    }
 }

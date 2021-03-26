@@ -4,8 +4,6 @@ use Radiocubito\Wordful\Http\Middleware\EnsureUserIsAuthorized;
 
 return [
 
-    'pro' => true,
-
     /*
     |--------------------------------------------------------------------------
     | Wordful Dashboard Route Middleware

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bba84d005dfa7c7f9c7405ddebe05229",
+    "content-hash": "d9eaa6194030773da35e27bf091655cf",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -64,16 +64,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.175.3",
+            "version": "3.176.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "836564a2cef648e60fee63d3f9c5a74757aa3217"
+                "reference": "0713d48ba190cf49486e1cd95cd2def25ef4c80e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/836564a2cef648e60fee63d3f9c5a74757aa3217",
-                "reference": "836564a2cef648e60fee63d3f9c5a74757aa3217",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0713d48ba190cf49486e1cd95cd2def25ef4c80e",
+                "reference": "0713d48ba190cf49486e1cd95cd2def25ef4c80e",
                 "shasum": ""
             },
             "require": {
@@ -148,9 +148,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.175.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.176.0"
             },
-            "time": "2021-03-24T18:14:18+00:00"
+            "time": "2021-03-25T18:17:15+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -1572,16 +1572,16 @@
         },
         {
             "name": "laravel/jetstream",
-            "version": "v2.2.4",
+            "version": "v2.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/jetstream.git",
-                "reference": "d20cd9bf3267aaffa0359ad97be03b2f43532adf"
+                "reference": "e05018b39d7f5ef7ef19af6ba8244e89c2402aab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/jetstream/zipball/d20cd9bf3267aaffa0359ad97be03b2f43532adf",
-                "reference": "d20cd9bf3267aaffa0359ad97be03b2f43532adf",
+                "url": "https://api.github.com/repos/laravel/jetstream/zipball/e05018b39d7f5ef7ef19af6ba8244e89c2402aab",
+                "reference": "e05018b39d7f5ef7ef19af6ba8244e89c2402aab",
                 "shasum": ""
             },
             "require": {
@@ -1635,7 +1635,7 @@
                 "issues": "https://github.com/laravel/jetstream/issues",
                 "source": "https://github.com/laravel/jetstream"
             },
-            "time": "2021-03-23T17:23:07+00:00"
+            "time": "2021-03-25T10:42:54+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -3542,16 +3542,16 @@
         },
         {
             "name": "radiocubito/laravel-wordful",
-            "version": "v0.9.0",
+            "version": "v0.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/radiocubito/laravel-wordful.git",
-                "reference": "39292ce2fb7d6dd41d88a876238f77de81c969b0"
+                "reference": "d96d9c85f21faa180440622d4fbc28fae2d2c5d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/radiocubito/laravel-wordful/zipball/39292ce2fb7d6dd41d88a876238f77de81c969b0",
-                "reference": "39292ce2fb7d6dd41d88a876238f77de81c969b0",
+                "url": "https://api.github.com/repos/radiocubito/laravel-wordful/zipball/d96d9c85f21faa180440622d4fbc28fae2d2c5d6",
+                "reference": "d96d9c85f21faa180440622d4fbc28fae2d2c5d6",
                 "shasum": ""
             },
             "require": {
@@ -3608,7 +3608,7 @@
             ],
             "support": {
                 "issues": "https://github.com/radiocubito/laravel-wordful/issues",
-                "source": "https://github.com/radiocubito/laravel-wordful/tree/v0.9.0"
+                "source": "https://github.com/radiocubito/laravel-wordful/tree/v0.10.1"
             },
             "funding": [
                 {
@@ -3616,95 +3616,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-24T23:27:40+00:00"
-        },
-        {
-            "name": "radiocubito/laravel-wordful-pro",
-            "version": "v0.0.6",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:radiocubito/laravel-wordful-pro.git",
-                "reference": "1e22e93aa8c6b13e00a30a33d35482be2b52c9d7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/radiocubito/laravel-wordful-pro/zipball/1e22e93aa8c6b13e00a30a33d35482be2b52c9d7",
-                "reference": "1e22e93aa8c6b13e00a30a33d35482be2b52c9d7",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^8.0",
-                "livewire/livewire": "^2.4",
-                "php": "^7.4|^8.0",
-                "radiocubito/laravel-wordful": "^0.9.0",
-                "spatie/laravel-package-tools": "^1.4.3"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^6.13",
-                "phpunit/phpunit": "^9.3",
-                "spatie/laravel-ray": "^1.9",
-                "vimeo/psalm": "^4.4"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Radiocubito\\WordfulPro\\WordfulProServiceProvider"
-                    ],
-                    "aliases": {
-                        "WordfulPro": "Radiocubito\\WordfulPro\\WordfulProFacade"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Radiocubito\\WordfulPro\\": "src",
-                    "Radiocubito\\WordfulPro\\Database\\Factories\\": "database/factories"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Radiocubito\\WordfulPro\\Tests\\": "tests"
-                }
-            },
-            "scripts": {
-                "psalm": [
-                    "vendor/bin/psalm"
-                ],
-                "test": [
-                    "vendor/bin/phpunit --colors=always"
-                ],
-                "test-coverage": [
-                    "vendor/bin/phpunit --coverage-html coverage"
-                ]
-            },
-            "license": [
-                "Commercial"
-            ],
-            "authors": [
-                {
-                    "name": "Oliver Jimenez-Servin",
-                    "email": "oliver@radiocubito.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "laravel-wordful-pro",
-            "homepage": "https://github.com/radiocubito/laravel-wordful-pro",
-            "keywords": [
-                "laravel-wordful-pro",
-                "radiocubito"
-            ],
-            "support": {
-                "source": "https://github.com/radiocubito/laravel-wordful-pro/tree/v0.0.6",
-                "issues": "https://github.com/radiocubito/laravel-wordful-pro/issues"
-            },
-            "funding": [
-                {
-                    "type": "github",
-                    "url": "https://github.com/radiocubito"
-                }
-            ],
-            "time": "2021-03-24T23:30:37+00:00"
+            "time": "2021-03-26T01:42:17+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -3977,16 +3889,16 @@
         },
         {
             "name": "spatie/laravel-package-tools",
-            "version": "1.6.1",
+            "version": "1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "a846cc8503ea3a1972650baf25686e6ec43d509f"
+                "reference": "4bb554dc9870127606c34d906a602989b8b376ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/a846cc8503ea3a1972650baf25686e6ec43d509f",
-                "reference": "a846cc8503ea3a1972650baf25686e6ec43d509f",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/4bb554dc9870127606c34d906a602989b8b376ff",
+                "reference": "4bb554dc9870127606c34d906a602989b8b376ff",
                 "shasum": ""
             },
             "require": {
@@ -4025,7 +3937,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.6.1"
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.6.2"
             },
             "funding": [
                 {
@@ -4033,7 +3945,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-16T19:49:42+00:00"
+            "time": "2021-03-25T08:05:55+00:00"
         },
         {
             "name": "spatie/laravel-sluggable",
