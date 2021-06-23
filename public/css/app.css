@@ -1119,6 +1119,11 @@ select {
   margin-bottom: 0;
 }
 
+.prose figure > a > img {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .prose-sm {
   font-size: 0.875rem;
   line-height: 1.7142857;
@@ -33089,6 +33094,11 @@ select {
     margin-bottom: 0;
   }
 
+  .sm\:prose figure > a > img {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .sm\:prose-sm {
     font-size: 0.875rem;
     line-height: 1.7142857;
@@ -64978,6 +64988,11 @@ select {
   }
 
   .md\:prose > :last-child {
+    margin-bottom: 0;
+  }
+
+  .md\:prose figure > a > img {
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -96873,6 +96888,11 @@ select {
     margin-bottom: 0;
   }
 
+  .lg\:prose figure > a > img {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .lg\:prose-sm {
     font-size: 0.875rem;
     line-height: 1.7142857;
@@ -128765,6 +128785,11 @@ select {
     margin-bottom: 0;
   }
 
+  .xl\:prose figure > a > img {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .xl\:prose-sm {
     font-size: 0.875rem;
     line-height: 1.7142857;
@@ -160654,6 +160679,11 @@ select {
   }
 
   .\32xl\:prose > :last-child {
+    margin-bottom: 0;
+  }
+
+  .\32xl\:prose figure > a > img {
+    margin-top: 0;
     margin-bottom: 0;
   }
 

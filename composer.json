@@ -20,7 +20,7 @@
         "laravel/vapor-ui": "^1.0",
         "league/flysystem-aws-s3-v3": "^1.0",
         "livewire/livewire": "^2.0",
-        "radiocubito/laravel-wordful": "^0.10.1"
+        "radiocubito/laravel-wordful": "^0.13"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
