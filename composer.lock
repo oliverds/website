@@ -64,16 +64,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.184.7",
+            "version": "3.185.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "d5d5fe5fdfca6c7a56f2f8364d09c3100d5c2149"
+                "reference": "6c919bc226f7ff3fbcbce948f31e618066d02ad0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d5d5fe5fdfca6c7a56f2f8364d09c3100d5c2149",
-                "reference": "d5d5fe5fdfca6c7a56f2f8364d09c3100d5c2149",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6c919bc226f7ff3fbcbce948f31e618066d02ad0",
+                "reference": "6c919bc226f7ff3fbcbce948f31e618066d02ad0",
                 "shasum": ""
             },
             "require": {
@@ -148,9 +148,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.184.7"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.185.0"
             },
-            "time": "2021-06-21T18:37:16+00:00"
+            "time": "2021-06-23T18:21:07+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -1971,16 +1971,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "9be3b16c877d477357c015cec057548cf9b2a14a"
+                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/9be3b16c877d477357c015cec057548cf9b2a14a",
-                "reference": "9be3b16c877d477357c015cec057548cf9b2a14a",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
+                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
                 "shasum": ""
             },
             "require": {
@@ -1996,7 +1996,6 @@
                 "phpunit/phpunit": "^8.5.8"
             },
             "suggest": {
-                "ext-fileinfo": "Required for MimeType",
                 "ext-ftp": "Allows you to use FTP server storage",
                 "ext-openssl": "Allows you to use FTPS server storage",
                 "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
@@ -2054,7 +2053,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/1.x"
+                "source": "https://github.com/thephpleague/flysystem/tree/1.1.4"
             },
             "funding": [
                 {
@@ -2062,7 +2061,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2020-08-23T07:39:11+00:00"
+            "time": "2021-06-23T21:56:05+00:00"
         },
         {
             "name": "league/flysystem-aws-s3-v3",
@@ -3503,16 +3502,16 @@
         },
         {
             "name": "radiocubito/laravel-wordful",
-            "version": "v0.13.0",
+            "version": "v0.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/radiocubito/laravel-wordful.git",
-                "reference": "087e61b22ffb6bb83f12ee86a44d89322f9e900f"
+                "reference": "a2579856acfad7d4d5105a4f7a4f048c3b6973c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/radiocubito/laravel-wordful/zipball/087e61b22ffb6bb83f12ee86a44d89322f9e900f",
-                "reference": "087e61b22ffb6bb83f12ee86a44d89322f9e900f",
+                "url": "https://api.github.com/repos/radiocubito/laravel-wordful/zipball/a2579856acfad7d4d5105a4f7a4f048c3b6973c0",
+                "reference": "a2579856acfad7d4d5105a4f7a4f048c3b6973c0",
                 "shasum": ""
             },
             "require": {
@@ -3570,7 +3569,7 @@
             ],
             "support": {
                 "issues": "https://github.com/radiocubito/laravel-wordful/issues",
-                "source": "https://github.com/radiocubito/laravel-wordful/tree/v0.13.0"
+                "source": "https://github.com/radiocubito/laravel-wordful/tree/v0.13.1"
             },
             "funding": [
                 {
@@ -3578,7 +3577,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-19T23:29:05+00:00"
+            "time": "2021-06-24T13:13:02+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
