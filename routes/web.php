@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 use Radiocubito\Wordful\Models\Post;
 
@@ -16,9 +17,22 @@ use Radiocubito\Wordful\Models\Post;
 */
 
 Route::get('/', function () {
+    $latestPost = Post::published()->ofType('post')->orderBy('published_at', 'desc')->first();
+
+    $years = Post::published()->ofType('post')->orderBy('published_at', 'desc')->get()
+        ->groupBy([
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('Y');
+            },
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('F');
+            },
+    ]);
+
     return view('home', [
+        'latestPost' => $latestPost,
         'author' => User::first(),
-        'posts' => Post::published()->ofType('post')->orderBy('published_at', 'desc')->get(),
+        'years' => $years,
     ]);
 })->name('home');
 
@@ -39,8 +53,19 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/{post:slug}', function (Post $post) {
     abort_unless($post->isPublished(), 404);
 
+    $years = Post::published()->ofType('post')->orderBy('published_at', 'desc')->get()
+        ->groupBy([
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('Y');
+            },
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('F');
+            },
+    ]);
+
     return view('post', [
         'author' => User::first(),
+        'years' => $years,
         'post' => $post,
     ]);
 })->name('posts.show');
