@@ -31,24 +31,18 @@ Route::get('/', function () {
 
     return view('home', [
         'latestPost' => $latestPost,
-        'author' => User::first(),
         'years' => $years,
     ]);
 })->name('home');
 
 Route::get('/feed', function () {
     $content = view('feed', [
-        'author' => User::first(),
         'posts' => Post::published()->ofType('post')->orderBy('published_at', 'desc')->get(),
     ]);
 
     return response($content, 200)
         ->header('Content-Type', 'text/xml');
 })->name('feed');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
 
 Route::get('/{post:slug}', function (Post $post) {
     abort_unless($post->isPublished(), 404);
@@ -64,7 +58,6 @@ Route::get('/{post:slug}', function (Post $post) {
     ]);
 
     return view('post', [
-        'author' => User::first(),
         'years' => $years,
         'post' => $post,
     ]);

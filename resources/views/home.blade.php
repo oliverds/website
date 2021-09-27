@@ -1,12 +1,12 @@
 <x-layout>
     <x-slot name="head">
-        <link rel="apple-touch-icon" sizes="300x300" href="{{ $author->profile_photo_url }}">
-        <link rel="icon" type="image/png" sizes="300x300" href="{{ $author->profile_photo_url }}">
+        <link rel="apple-touch-icon" sizes="300x300" href="{{ asset('/img/profile_photo.jpg') }}">
+        <link rel="icon" type="image/png" sizes="300x300" href="{{ asset('/img/profile_photo.jpg') }}">
 
         <x-social-meta
             :title="config('app.name')"
             :description="config('app.name')"
-            :image="$author->profile_photo_url"
+            :image="asset('/img/profile_photo.jpg')"
             type="article"
             card="summary"
         />
@@ -17,23 +17,25 @@
 
         @include('_navigation')
 
-        <hr class="h-px border-0 bg-gradient-to-r from-gray-50 via-gray-300 to-gray-50 mt-12">
+        @if($latestPost)
+            <hr class="h-px border-0 bg-gradient-to-r from-gray-50 via-gray-300 to-gray-50 mt-12">
 
-        <p class="text-xs lg:text-sm uppercase tracking-wide font-semibold text-gray-900 mt-12">
-            <time datetime="{{ $latestPost->published_at->format('Y-m-d') }}">{{ $latestPost->published_at->format('F j, Y') }}</time>
-        </p>
+            <p class="text-xs lg:text-sm uppercase tracking-wide font-semibold text-gray-900 mt-12">
+                <time datetime="{{ $latestPost->published_at->format('Y-m-d') }}">{{ $latestPost->published_at->format('F j, Y') }}</time>
+            </p>
 
-        <h1 class="text-xl lg:text-3xl font-bold leading-none mt-2 text-gray-900">
-            {{ $latestPost->title }}
-        </h1>
+            <h1 class="text-xl lg:text-3xl font-bold leading-none mt-2 text-gray-900">
+                {{ $latestPost->title }}
+            </h1>
 
-        <section class="mt-12">
-            <article>
-                <div class="prose lg:prose-xl">
-                    {!! $latestPost->html !!}
-                </div>
-            </article>
-        </section>
+            <section class="mt-12">
+                <article>
+                    <div class="prose lg:prose-xl">
+                        {!! $latestPost->html !!}
+                    </div>
+                </article>
+            </section>
+        @endif
 
         <section class="mt-12">
             @include('_subscribe')
