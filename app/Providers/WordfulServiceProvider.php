@@ -14,11 +14,11 @@ class WordfulServiceProvider extends ServiceProvider
 
     protected function gate()
     {
-        Gate::define('viewWordful', function ($user = null) {
-            return in_array(optional($user)->email, [
+        Gate::define('viewWordful', function ($user) {
+           return in_array($user->email, [
                 'oliver@radiocubito.com',
             ]);
-        });
+       });
     }
 
     public function register()

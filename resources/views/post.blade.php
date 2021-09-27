@@ -1,12 +1,12 @@
 <x-layout :title="$post->title">
     <x-slot name="head">
-        <link rel="apple-touch-icon" sizes="300x300" href="{{ $author->profile_photo_url }}">
-        <link rel="icon" type="image/png" sizes="300x300" href="{{ $author->profile_photo_url }}">
+        <link rel="apple-touch-icon" sizes="300x300" href="{{ asset('/img/profile_photo.jpg') }}">
+        <link rel="icon" type="image/png" sizes="300x300" href="{{ asset('/img/profile_photo.jpg') }}">
 
         <x-social-meta
             :title="$post->title"
             :description="$post->excerpt"
-            :image="$author->profile_photo_url"
+            :image="asset('/img/profile_photo.jpg')"
             type="article"
             card="summary"
         />
