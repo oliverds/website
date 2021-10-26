@@ -17,6 +17,20 @@
 
         @include('_navigation')
 
+        <hr class="h-px border-0 bg-gradient-to-r from-gray-50 via-gray-300 to-gray-50 mt-12">
+
+        <p class="text-xs lg:text-sm uppercase tracking-wide font-semibold text-gray-900 mt-12">
+            Projects
+        </p>
+
+        <div class="grid grid-cols-2 mt-4">
+            <div class="bg-gray-100 p-4 rounded-md">
+                <div class="h-12 flex items-center"><a href="https://mitophp.com" target="_blank"><img class="h-5" src="{{ asset('/img/mito-icon.png') }}" alt="Mito"></a></div>
+                <p class="mt-4">A blog publishing platform with a minimal UI to manage a markdown blog publication.</p>
+                <p class="mt-4"><a href="https://mitophp.com" target="_blank" class="text-gray-500 text-sm">mitophp.com ›</a></p>
+            </div>
+        </div>
+
         @if($latestPost)
             <hr class="h-px border-0 bg-gradient-to-r from-gray-50 via-gray-300 to-gray-50 mt-12">
 
