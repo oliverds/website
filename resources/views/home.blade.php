@@ -23,7 +23,7 @@
             Projects
         </p>
 
-        <div class="grid grid-cols-2 mt-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 mt-4">
             <div class="bg-gray-100 p-4 rounded-md">
                 <div class="h-12 flex items-center"><a href="https://mitophp.com" target="_blank"><img class="h-5" src="{{ asset('/img/mito-icon.png') }}" alt="Mito"></a></div>
                 <p class="mt-4">A blog publishing platform with a minimal UI to manage a markdown blog publication.</p>
