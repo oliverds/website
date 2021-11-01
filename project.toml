@@ -1,0 +1,13 @@
+[build]
+exclude = [
+    "laravel-buildpack"
+]
+
+[[build.buildpacks]]
+uri = "ghcr.io/railwayapp/nodejs"
+
+[[build.buildpacks]]
+uri = "gcr.io/paketo-buildpacks/php"
+
+[[build.buildpacks]]
+uri = "laravel-buildpack/"

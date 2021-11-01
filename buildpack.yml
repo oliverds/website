@@ -1,0 +1,5 @@
+---
+php:
+  version: 8.0.*
+  webserver: nginx
+  webdirectory: public

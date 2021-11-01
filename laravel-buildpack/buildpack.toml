@@ -1,0 +1,17 @@
+# Buildpack API version
+api = "0.5"
+
+# Buildpack ID and metadata
+[buildpack]
+id = "radiocubito/laravel"
+version = "0.0.1"
+
+# Stacks that the buildpack will work with
+[[stacks]]
+id = "io.buildpacks.samples.stacks.bionic"
+
+[[stacks]]
+id = "io.buildpacks.samples.stacks.alpine"
+
+[[stacks]]
+id = "io.buildpacks.stacks.bionic"

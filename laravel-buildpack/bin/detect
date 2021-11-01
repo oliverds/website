@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -eux -o pipefail
+
+if [[ ! -f "artisan" ]]; then
+   exit 100
+fi
