@@ -11,7 +11,8 @@
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.7"
+        "livewire/livewire": "^2.7",
+        "mitophp/mito": "dev-main"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -63,5 +64,11 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": {
+        "local": {
+            "type": "path",
+            "url": "../mito"
+        }
+    }
 }

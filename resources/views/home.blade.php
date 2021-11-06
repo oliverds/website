@@ -44,16 +44,10 @@
 
             <section class="mt-12">
                 <article>
-                    <div class="prose lg:prose-xl">
-                        {!! $latestPost->html !!}
-                    </div>
+                    <x-mito-markdown class="prose min-w-full" flavor="github">{!! $latestPost->markdown_without_title !!}</x-mito-markdown>
                 </article>
             </section>
         @endif
-
-        <section class="mt-12">
-            @include('_subscribe')
-        </section>
 
         <hr class="h-px border-0 bg-gradient-to-r from-gray-50 via-gray-300 to-gray-50 mt-12">
 

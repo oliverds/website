@@ -3,7 +3,7 @@
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
-use Radiocubito\Wordful\Models\Post;
+use Mito\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +17,9 @@ use Radiocubito\Wordful\Models\Post;
 */
 
 Route::get('/', function () {
-    $latestPost = Post::published()->ofType('post')->orderBy('published_at', 'desc')->first();
+    $latestPost = Post::published()->orderBy('published_at', 'desc')->first();
 
-    $years = Post::published()->ofType('post')->orderBy('published_at', 'desc')->get()
+    $years = Post::published()->orderBy('published_at', 'desc')->get()
         ->groupBy([
             function ($post) {
                 return Carbon::parse($post->published_at)->format('Y');
@@ -37,7 +37,8 @@ Route::get('/', function () {
 
 Route::get('/feed', function () {
     $content = view('feed', [
-        'posts' => Post::published()->ofType('post')->orderBy('published_at', 'desc')->get(),
+        'author' => User::first(),
+        'posts' => Post::published()->orderBy('published_at', 'desc')->get(),
     ]);
 
     return response($content, 200)
@@ -47,7 +48,7 @@ Route::get('/feed', function () {
 Route::get('/{post:slug}', function (Post $post) {
     abort_unless($post->isPublished(), 404);
 
-    $years = Post::published()->ofType('post')->orderBy('published_at', 'desc')->get()
+    $years = Post::published()->orderBy('published_at', 'desc')->get()
         ->groupBy([
             function ($post) {
                 return Carbon::parse($post->published_at)->format('Y');
