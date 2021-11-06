@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Post;
+use Mito\Models\Post;
 
 it('renders the homepage', function () {
     $response = $this->get('/');
@@ -9,9 +9,13 @@ it('renders the homepage', function () {
 });
 
 it('shows only published posts on the homepage', function () {
-    $publishedPost = Post::factory()->published()->create();
+    $publishedPost = Post::factory([
+        'slug' => 'published-post',
+    ])->published()->create();
 
-    $draftPost = Post::factory()->draft()->create();
+    $draftPost = Post::factory([
+        'slug' => 'draft',
+    ])->draft()->create();
 
     $response = $this->get('/');
 

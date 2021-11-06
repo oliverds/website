@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
-  <id>tag:oliver2.mx.test,2005:/feed</id>
-  <link rel="alternate" type="text/html" href="http://oliver2.mx.test"/>
-  <link rel="self" type="application/atom+xml" href="http://oliver2.mx.test/feed"/>
+  <id>tag:oliver.mx.test,2005:/feed</id>
+  <link rel="alternate" type="text/html" href="http://oliver.mx.test"/>
+  <link rel="self" type="application/atom+xml" href="http://oliver.mx.test/feed"/>
   <title><![CDATA[Oliver Servín]]></title>
   <updated>2021-10-13T12:00:00Z</updated>
   <entry>
-    <id>tag:oliver2.mx.test,2005:World::Post/1</id>
+    <id>tag:oliver.mx.test,2005:World::Post/1</id>
     <published>2021-10-13T12:00:00Z</published>
     <updated>2021-10-13T12:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="http://oliver2.mx.test/test-post-title"/>
-    <title><![CDATA[Test post title]]></title>
-    <content type="html"><![CDATA[Test post description]]></content>
+    <link rel="alternate" type="text/html" href="http://oliver.mx.test/test-post-slug"/>
+    <title><![CDATA[Test post description]]></title>
+    <content type="html"><![CDATA[]]></content>
     <author>
       <name><![CDATA[Oliver]]></name>
       <email><![CDATA[m@oliver.mx]]></email>

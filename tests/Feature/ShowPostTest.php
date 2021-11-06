@@ -1,9 +1,11 @@
 <?php
 
-use App\Models\Post;
+use Mito\Models\Post;
 
 it('shows a published post', function () {
-    $publishedPost = Post::factory()->published()->create();
+    $publishedPost = Post::factory([
+        'slug' => 'published-post',
+    ])->published()->create();
 
     $response = $this->get(route('posts.show', $publishedPost));
 
@@ -13,7 +15,9 @@ it('shows a published post', function () {
 });
 
 it('does not show a draft post', function () {
-    $draftPost = Post::factory()->draft()->create();
+    $draftPost = Post::factory([
+        'slug' => 'published-post',
+    ])->draft()->create();
 
     $response = $this->get(route('posts.show', $draftPost));
 
