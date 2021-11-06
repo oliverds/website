@@ -45,6 +45,38 @@ Route::get('/feed', function () {
         ->header('Content-Type', 'text/xml');
 })->name('feed');
 
+Route::get('/now', function () {
+    $years = Post::published()->orderBy('published_at', 'desc')->get()
+        ->groupBy([
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('Y');
+            },
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('F');
+            },
+    ]);
+
+    return view('now', [
+        'years' => $years,
+    ]);
+})->name('feed');
+
+Route::get('/contact', function () {
+    $years = Post::published()->orderBy('published_at', 'desc')->get()
+        ->groupBy([
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('Y');
+            },
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('F');
+            },
+    ]);
+
+    return view('contact', [
+        'years' => $years,
+    ]);
+})->name('feed');
+
 Route::get('/{post:slug}', function (Post $post) {
     abort_unless($post->isPublished(), 404);
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef161305d1e7540503a455542ce2c793",
+    "content-hash": "53c4c18abdb766fccb0cb099ede32578",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1739,10 +1739,16 @@
         {
             "name": "mitophp/mito",
             "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mitophp/mito.git",
+                "reference": "f616e14355add710d3e50854d8b29df17f2455c4"
+            },
             "dist": {
-                "type": "path",
-                "url": "../mito",
-                "reference": "7f0a916d9e2564f0ae75640eec5886cd2a5c47ba"
+                "type": "zip",
+                "url": "https://api.github.com/repos/mitophp/mito/zipball/f616e14355add710d3e50854d8b29df17f2455c4",
+                "reference": "f616e14355add710d3e50854d8b29df17f2455c4",
+                "shasum": ""
             },
             "require": {
                 "illuminate/contracts": "^8.67",
@@ -1761,6 +1767,7 @@
                 "pestphp/pest-plugin-livewire": "^1.0",
                 "spatie/laravel-ray": "^1.23"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1775,19 +1782,7 @@
                     "Mito\\Database\\Factories\\": "database/factories"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\": "tests"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "./vendor/bin/pest --no-coverage"
-                ],
-                "test-coverage": [
-                    "vendor/bin/phpunit --coverage-html coverage"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1801,13 +1796,20 @@
             "description": "A minimal Laravel package for blog publishing",
             "homepage": "https://github.com/mitophp/mito",
             "keywords": [
+                "Mito",
                 "laravel",
-                "mito",
                 "mitophp"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/mitophp/mito/tree/main"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/mito",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-11-06T19:27:14+00:00"
         },
         {
             "name": "monolog/monolog",
