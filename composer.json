@@ -64,11 +64,5 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": {
-        "local": {
-            "type": "path",
-            "url": "../mito"
-        }
-    }
+    "prefer-stable": true
 }
