@@ -1742,12 +1742,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mitophp/mito.git",
-                "reference": "f616e14355add710d3e50854d8b29df17f2455c4"
+                "reference": "ab80eebb1d03a564a8a19fe4f8fa91923e8ec28b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mitophp/mito/zipball/f616e14355add710d3e50854d8b29df17f2455c4",
-                "reference": "f616e14355add710d3e50854d8b29df17f2455c4",
+                "url": "https://api.github.com/repos/mitophp/mito/zipball/ab80eebb1d03a564a8a19fe4f8fa91923e8ec28b",
+                "reference": "ab80eebb1d03a564a8a19fe4f8fa91923e8ec28b",
                 "shasum": ""
             },
             "require": {
@@ -1809,7 +1809,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-11-06T19:27:14+00:00"
+            "time": "2021-11-06T22:26:35+00:00"
         },
         {
             "name": "monolog/monolog",
