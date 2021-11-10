@@ -49,7 +49,7 @@ class ResetPassword extends Component
         if ($status == Password::PASSWORD_RESET) {
             session()->flash('status', __($status));
 
-            return redirect()->route('wordful.auth.login');
+            return redirect()->route('mito.auth.login');
         } else {
             $this->addError('email', __($status));
         }

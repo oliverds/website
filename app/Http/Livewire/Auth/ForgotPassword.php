@@ -22,7 +22,7 @@ class ForgotPassword extends Component
         $this->validate();
 
         ResetPassword::createUrlUsing(function ($notifiable, $token) {
-            return url(route('wordful.password.reset', [
+            return url(route('mito.password.reset', [
                 'token' => $token,
                 'email' => $notifiable->getEmailForPasswordReset(),
             ], false));
