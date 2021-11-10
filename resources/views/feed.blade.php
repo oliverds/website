@@ -14,7 +14,7 @@
         <link rel="alternate" type="text/html" href="{{ route('posts.show', $post) }}" />
         <title><![CDATA[{{ $post->title }}]]></title>
         <content type="html">
-            <![CDATA[{!! $post->html !!}]]>
+            <![CDATA[<x-mito-markdown flavor="github">{!! $post->markdown_without_title !!}</x-mito-markdown>]]>
         </content>
         <author>
             <name> <![CDATA[{{ $author->name }}]]></name>
