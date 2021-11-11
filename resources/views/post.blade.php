@@ -25,7 +25,7 @@
 
         <section class="mt-12">
             <article>
-                <x-mito-markdown class="prose min-w-full" flavor="github">{!! $post->markdown_without_title !!}</x-mito-markdown>
+                <x-markdown class="prose min-w-full" flavor="github">{!! $post->markdown_without_title !!}</x-markdown>
             </article>
         </section>
 
