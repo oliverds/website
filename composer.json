@@ -11,6 +11,7 @@
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "league/flysystem-aws-s3-v3": "^1.0",
         "livewire/livewire": "^2.7",
         "mitophp/mito": "dev-main",
         "torchlight/torchlight-commonmark": "^0.5.2"
