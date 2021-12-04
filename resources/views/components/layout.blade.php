@@ -14,4 +14,8 @@
             <script async defer data-website-id="96e24546-82c4-4144-a473-35d0c94f7b57" src="https://stats.radiocubito.com/umami.js"></script>
         @endguest
     @endproduction
+
+    @guest
+        <script async defer data-volante src="{{ asset('vendor/volante/js/volante.js') }}"></script>
+    @endguest
 </x-html>
