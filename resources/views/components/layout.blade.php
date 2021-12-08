@@ -16,6 +16,6 @@
     @endproduction
 
     @guest
-        <script async defer data-volante src="{{ asset('vendor/volante/js/volante.js') }}"></script>
+        <script async defer data-volante src="{{ asset(mix('js/volante.js', 'vendor/volante')) }}"></script>
     @endguest
 </x-html>

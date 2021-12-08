@@ -1,6 +1,5 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/js/volante.js": "/js/volante.js",
-    "/css/app.css": "/css/app.css",
-    "/volante-app/public/vendor/volante/mix-manifest.json": "/volante-app/public/vendor/volante/mix-manifest.json"
+    "/js/app.js": "/js/app.js?id=fd0aa1af6019fa473a5d",
+    "/js/volante.js": "/js/volante.js?id=8275a95a36811127a5e3",
+    "/css/app.css": "/css/app.css?id=fa5e785ce2dd28262b81"
 }
