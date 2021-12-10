@@ -6813,12 +6813,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:volantephp/volante.git",
-                "reference": "8eed34bbdda864affca1cf78f68aa0184ef1524d"
+                "reference": "8e1f4dd04ddbd04bef68454a5a074289550ef270"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/volantephp/volante/zipball/8eed34bbdda864affca1cf78f68aa0184ef1524d",
-                "reference": "8eed34bbdda864affca1cf78f68aa0184ef1524d",
+                "url": "https://api.github.com/repos/volantephp/volante/zipball/8e1f4dd04ddbd04bef68454a5a074289550ef270",
+                "reference": "8e1f4dd04ddbd04bef68454a5a074289550ef270",
                 "shasum": ""
             },
             "require": {
@@ -6903,7 +6903,7 @@
                     "url": "https://github.com/volante"
                 }
             ],
-            "time": "2021-12-10T02:39:47+00:00"
+            "time": "2021-12-10T03:03:27+00:00"
         },
         {
             "name": "webmozart/assert",
