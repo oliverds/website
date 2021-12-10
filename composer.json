@@ -46,7 +46,8 @@
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
             "@php artisan vendor:publish --force --tag=livewire:assets --ansi",
-            "@php artisan vendor:publish --force --tag=mito-assets --ansi"
+            "@php artisan vendor:publish --force --tag=mito-assets --ansi",
+            "@php artisan vendor:publish --force --tag=volante-assets --ansi"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi"
