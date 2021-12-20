@@ -1,6 +1,6 @@
 <?php
 
-use Mito\Models\Post;
+use Olipacks\Mito\Models\Post;
 
 it('renders the homepage', function () {
     $response = $this->get('/');

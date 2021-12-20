@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2b0e47e9701b3b42f7fbe8cd72d74db",
+    "content-hash": "647679fd48c9b84523d9e4d766c90925",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -114,16 +114,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.208.5",
+            "version": "3.208.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "58fa9d8b522b0afa260299179ff950c783ff0ee1"
+                "reference": "6154edd0a34db103c69ec15e258ea73e4e45d471"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/58fa9d8b522b0afa260299179ff950c783ff0ee1",
-                "reference": "58fa9d8b522b0afa260299179ff950c783ff0ee1",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6154edd0a34db103c69ec15e258ea73e4e45d471",
+                "reference": "6154edd0a34db103c69ec15e258ea73e4e45d471",
                 "shasum": ""
             },
             "require": {
@@ -199,9 +199,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.208.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.208.6"
             },
-            "time": "2021-12-13T20:17:56+00:00"
+            "time": "2021-12-20T19:17:52+00:00"
         },
         {
             "name": "brick/math",
@@ -1512,16 +1512,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.76.1",
+            "version": "v8.76.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "83fe447ae964dc5f1f829d25fa2f6042d9099834"
+                "reference": "c67acfdc968f487b6235435080eef62a7e2ed055"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/83fe447ae964dc5f1f829d25fa2f6042d9099834",
-                "reference": "83fe447ae964dc5f1f829d25fa2f6042d9099834",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/c67acfdc968f487b6235435080eef62a7e2ed055",
+                "reference": "c67acfdc968f487b6235435080eef62a7e2ed055",
                 "shasum": ""
             },
             "require": {
@@ -1680,7 +1680,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-12-14T16:21:19+00:00"
+            "time": "2021-12-15T14:02:14+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -2594,81 +2594,6 @@
             "time": "2020-11-02T17:00:53+00:00"
         },
         {
-            "name": "mitophp/mito",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mitophp/mito.git",
-                "reference": "7d42a62864c90b301147634b16d69c04b79321b8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mitophp/mito/zipball/7d42a62864c90b301147634b16d69c04b79321b8",
-                "reference": "7d42a62864c90b301147634b16d69c04b79321b8",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^8.67",
-                "league/commonmark": "^2.0",
-                "livewire/livewire": "^2.7.2",
-                "php": "^8.0",
-                "spatie/laravel-package-tools": "^1.9.2",
-                "wire-elements/modal": "^1.0"
-            },
-            "require-dev": {
-                "nunomaduro/collision": "^5.3",
-                "nunomaduro/larastan": "^1.0",
-                "orchestra/testbench": "^6.22",
-                "pestphp/pest": "^1.20",
-                "pestphp/pest-plugin-laravel": "^1.1",
-                "pestphp/pest-plugin-livewire": "^1.0",
-                "spatie/laravel-ray": "^1.23"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Mito\\MitoServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Mito\\": "src",
-                    "Mito\\Database\\Factories\\": "database/factories"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oliver Servín",
-                    "email": "oliver@radiocubito.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A minimal Laravel package for blog publishing",
-            "homepage": "https://github.com/mitophp/mito",
-            "keywords": [
-                "Mito",
-                "laravel",
-                "mitophp"
-            ],
-            "support": {
-                "source": "https://github.com/mitophp/mito/tree/main"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/mito",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-11-23T02:35:57+00:00"
-        },
-        {
             "name": "mobiledetect/mobiledetectlib",
             "version": "2.8.37",
             "source": {
@@ -3188,6 +3113,180 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.2"
             },
             "time": "2021-11-30T19:35:32+00:00"
+        },
+        {
+            "name": "olipacks/mito",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/olipacks/mito.git",
+                "reference": "2422c54fb6dea763ef12ec9ff53ad6d71d45020e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/olipacks/mito/zipball/2422c54fb6dea763ef12ec9ff53ad6d71d45020e",
+                "reference": "2422c54fb6dea763ef12ec9ff53ad6d71d45020e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.67",
+                "league/commonmark": "^2.0",
+                "livewire/livewire": "^2.7.2",
+                "php": "^8.0",
+                "spatie/laravel-package-tools": "^1.9.2",
+                "wire-elements/modal": "^1.0"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^5.3",
+                "nunomaduro/larastan": "^1.0",
+                "orchestra/testbench": "^6.22",
+                "pestphp/pest": "^1.20",
+                "pestphp/pest-plugin-laravel": "^1.1",
+                "pestphp/pest-plugin-livewire": "^1.0",
+                "spatie/laravel-ray": "^1.23"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Olipacks\\Mito\\MitoServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Olipacks\\Mito\\": "src",
+                    "Olipacks\\Mito\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Servín",
+                    "email": "oliver@radiocubito.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A minimal Laravel package for blog publishing",
+            "homepage": "https://github.com/olipacks/mito",
+            "keywords": [
+                "Mito",
+                "laravel",
+                "olipacks"
+            ],
+            "support": {
+                "source": "https://github.com/olipacks/mito/tree/main"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/mito",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-12-20T23:21:41+00:00"
+        },
+        {
+            "name": "olipacks/volante",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:olipacks/volante.git",
+                "reference": "7a77462154095aa6c5ed7fe3784ca3a353d357e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/olipacks/volante/zipball/7a77462154095aa6c5ed7fe3784ca3a353d357e9",
+                "reference": "7a77462154095aa6c5ed7fe3784ca3a353d357e9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.73",
+                "jenssegers/agent": "^2.6.4",
+                "livewire/livewire": "^2.8",
+                "lorisleiva/laravel-actions": "^2.2",
+                "php": "^8.0",
+                "spatie/laravel-package-tools": "^1.9.2",
+                "stevebauman/location": "^6.2"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^5.10",
+                "nunomaduro/larastan": "^1.0",
+                "orchestra/testbench": "^6.22",
+                "pestphp/pest": "^1.10",
+                "pestphp/pest-plugin-faker": "^1.0",
+                "pestphp/pest-plugin-laravel": "^1.1",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^9.4",
+                "spatie/laravel-ray": "^1.26"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Olipacks\\Volante\\VolanteServiceProvider"
+                    ],
+                    "aliases": {
+                        "Volante": "Olipacks\\Volante\\Facades\\Volante"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Olipacks\\Volante\\": "src",
+                    "Olipacks\\Volante\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Olipacks\\Volante\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "phpstan": [
+                    "vendor/bin/phpstan analyse"
+                ],
+                "test": [
+                    "vendor/bin/pest"
+                ],
+                "test-coverage": [
+                    "vendor/bin/pest coverage"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Servín",
+                    "email": "oliver@radiocubito.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Minimal web analytics for Laravel",
+            "homepage": "https://github.com/Olipacks/volante",
+            "keywords": [
+                "Olipacks",
+                "laravel",
+                "volante"
+            ],
+            "support": {
+                "source": "https://github.com/olipacks/volante/tree/main",
+                "issues": "https://github.com/olipacks/volante/issues"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/volante"
+                }
+            ],
+            "time": "2021-12-17T14:19:56+00:00"
         },
         {
             "name": "opis/closure",
@@ -4034,16 +4133,16 @@
         },
         {
             "name": "spatie/laravel-package-tools",
-            "version": "1.9.2",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "f710fe196c126fb9e0aee67eb5af49ad8f13f528"
+                "reference": "97c24d0bc58e04d55e4a6a7b6d6102cb45b75789"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/f710fe196c126fb9e0aee67eb5af49ad8f13f528",
-                "reference": "f710fe196c126fb9e0aee67eb5af49ad8f13f528",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/97c24d0bc58e04d55e4a6a7b6d6102cb45b75789",
+                "reference": "97c24d0bc58e04d55e4a6a7b6d6102cb45b75789",
                 "shasum": ""
             },
             "require": {
@@ -4052,8 +4151,8 @@
             },
             "require-dev": {
                 "mockery/mockery": "^1.4",
-                "orchestra/testbench": "^5.0|^6.0",
-                "phpunit/phpunit": "^9.3",
+                "orchestra/testbench": "^5.0|^6.23",
+                "phpunit/phpunit": "^9.4",
                 "spatie/test-time": "^1.2"
             },
             "type": "library",
@@ -4082,7 +4181,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.9.2"
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.10.0"
             },
             "funding": [
                 {
@@ -4090,7 +4189,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-21T13:06:51+00:00"
+            "time": "2021-12-18T20:33:51+00:00"
         },
         {
             "name": "spatie/regex",
@@ -6810,105 +6909,6 @@
             "time": "2020-11-12T00:07:28+00:00"
         },
         {
-            "name": "volantephp/volante",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:volantephp/volante.git",
-                "reference": "4d6b175e302bb2aaf1d543b839e3deafcd33ff3b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/volantephp/volante/zipball/4d6b175e302bb2aaf1d543b839e3deafcd33ff3b",
-                "reference": "4d6b175e302bb2aaf1d543b839e3deafcd33ff3b",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^8.73",
-                "jenssegers/agent": "^2.6.4",
-                "livewire/livewire": "^2.8",
-                "lorisleiva/laravel-actions": "^2.2",
-                "php": "^8.0",
-                "spatie/laravel-package-tools": "^1.9.2",
-                "stevebauman/location": "^6.2"
-            },
-            "require-dev": {
-                "nunomaduro/collision": "^5.10",
-                "nunomaduro/larastan": "^1.0",
-                "orchestra/testbench": "^6.22",
-                "pestphp/pest": "^1.10",
-                "pestphp/pest-plugin-faker": "^1.0",
-                "pestphp/pest-plugin-laravel": "^1.1",
-                "phpstan/extension-installer": "^1.1",
-                "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "phpunit/phpunit": "^9.4",
-                "spatie/laravel-ray": "^1.26"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Volante\\VolanteServiceProvider"
-                    ],
-                    "aliases": {
-                        "Volante": "Volante\\Facades\\Volante"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Volante\\": "src",
-                    "Volante\\Database\\Factories\\": "database/factories"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Volante\\Tests\\": "tests"
-                }
-            },
-            "scripts": {
-                "phpstan": [
-                    "vendor/bin/phpstan analyse"
-                ],
-                "test": [
-                    "vendor/bin/pest"
-                ],
-                "test-coverage": [
-                    "vendor/bin/pest coverage"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oliver Servín",
-                    "email": "oliver@radiocubito.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Minial web analytics",
-            "homepage": "https://github.com/volante/volante",
-            "keywords": [
-                "laravel",
-                "volante",
-                "volante"
-            ],
-            "support": {
-                "source": "https://github.com/volantephp/volante/tree/main",
-                "issues": "https://github.com/volantephp/volante/issues"
-            },
-            "funding": [
-                {
-                    "type": "github",
-                    "url": "https://github.com/volante"
-                }
-            ],
-            "time": "2021-12-15T02:38:03+00:00"
-        },
-        {
             "name": "webmozart/assert",
             "version": "1.10.0",
             "source": {
@@ -7480,16 +7480,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.12.11",
+            "version": "v1.12.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "236b1eb30c36c642b038dc1081036827310b6902"
+                "reference": "c60773f04f093bd1d2f3b99ff9e5a1aa5b05b8b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/236b1eb30c36c642b038dc1081036827310b6902",
-                "reference": "236b1eb30c36c642b038dc1081036827310b6902",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/c60773f04f093bd1d2f3b99ff9e5a1aa5b05b8b6",
+                "reference": "c60773f04f093bd1d2f3b99ff9e5a1aa5b05b8b6",
                 "shasum": ""
             },
             "require": {
@@ -7536,7 +7536,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2021-12-14T17:54:29+00:00"
+            "time": "2021-12-16T14:58:08+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -10266,8 +10266,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "mitophp/mito": 20,
-        "volantephp/volante": 20
+        "olipacks/mito": 20,
+        "olipacks/volante": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

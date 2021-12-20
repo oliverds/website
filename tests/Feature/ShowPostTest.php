@@ -1,6 +1,6 @@
 <?php
 
-use Mito\Models\Post;
+use Olipacks\Mito\Models\Post;
 
 it('shows a published post', function () {
     $publishedPost = Post::factory([

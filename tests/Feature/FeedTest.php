@@ -2,7 +2,7 @@
 
 use App\Models\User;
 use Illuminate\Support\Carbon;
-use Mito\Models\Post;
+use Olipacks\Mito\Models\Post;
 
 beforeEach(function () {
     $author = User::factory([

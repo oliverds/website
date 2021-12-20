@@ -14,9 +14,9 @@
         "laravel/tinker": "^2.5",
         "league/flysystem-aws-s3-v3": "^1.0",
         "livewire/livewire": "^2.7",
-        "mitophp/mito": "dev-main",
+        "olipacks/mito": "dev-main",
         "torchlight/torchlight-commonmark": "^0.5.2",
-        "volantephp/volante": "dev-main"
+        "olipacks/volante": "dev-main"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

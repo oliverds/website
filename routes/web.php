@@ -3,7 +3,7 @@
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
-use Mito\Models\Post;
+use Olipacks\Mito\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
