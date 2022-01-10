@@ -15,8 +15,9 @@
         "league/flysystem-aws-s3-v3": "^1.0",
         "livewire/livewire": "^2.7",
         "olipacks/mito": "dev-main",
-        "torchlight/torchlight-commonmark": "^0.5.2",
-        "olipacks/volante": "dev-main"
+        "olipacks/volante": "dev-main",
+        "spatie/laravel-ray": "^1.27",
+        "torchlight/torchlight-commonmark": "^0.5.2"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

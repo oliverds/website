@@ -17,9 +17,9 @@ use Olipacks\Mito\Models\Post;
 */
 
 Route::get('/', function () {
-    $latestPost = Post::published()->orderBy('published_at', 'desc')->first();
+    $latestPost = Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->first();
 
-    $years = Post::published()->orderBy('published_at', 'desc')->get()
+    $years = Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->get()
         ->groupBy([
             function ($post) {
                 return Carbon::parse($post->published_at)->format('Y');
@@ -35,10 +35,31 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
+Route::get('/es', function () {
+    app()->setLocale('es');
+
+    $latestPost = Post::hasTag('es')->published()->orderBy('published_at', 'desc')->first();
+
+    $years = Post::hasTag('es')->published()->orderBy('published_at', 'desc')->get()
+        ->groupBy([
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('Y');
+            },
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('F');
+            },
+    ]);
+
+    return view('es.home', [
+        'latestPost' => $latestPost,
+        'years' => $years,
+    ]);
+})->name('es.home');
+
 Route::get('/feed', function () {
     $content = view('feed', [
         'author' => User::first(),
-        'posts' => Post::published()->orderBy('published_at', 'desc')->get(),
+        'posts' => Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->get(),
     ]);
 
     return response($content, 200)
@@ -46,7 +67,7 @@ Route::get('/feed', function () {
 })->name('feed');
 
 Route::get('/now', function () {
-    $years = Post::published()->orderBy('published_at', 'desc')->get()
+    $years = Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->get()
         ->groupBy([
             function ($post) {
                 return Carbon::parse($post->published_at)->format('Y');
@@ -62,7 +83,7 @@ Route::get('/now', function () {
 })->name('feed');
 
 Route::get('/contact', function () {
-    $years = Post::published()->orderBy('published_at', 'desc')->get()
+    $years = Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->get()
         ->groupBy([
             function ($post) {
                 return Carbon::parse($post->published_at)->format('Y');
@@ -77,10 +98,37 @@ Route::get('/contact', function () {
     ]);
 })->name('feed');
 
+Route::get('/es/{post:slug}', function (Post $post) {
+    abort_unless($post->isPublished(), 404);
+
+    abort_unless($post->tags->pluck('slug')->contains('es'), 404);
+
+    app()->setLocale('es');
+
+    Carbon::setlocale(app()->getLocale());
+
+    $years = Post::hasTag('es')->published()->orderBy('published_at', 'desc')->get()
+        ->groupBy([
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('Y');
+            },
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('F');
+            },
+    ]);
+
+    return view('es.post', [
+        'years' => $years,
+        'post' => $post,
+    ]);
+})->name('es.posts.show');
+
 Route::get('/{post:slug}', function (Post $post) {
     abort_unless($post->isPublished(), 404);
 
-    $years = Post::published()->orderBy('published_at', 'desc')->get()
+    abort_unless($post->tags->pluck('slug')->doesntContain('es'), 404);
+
+    $years = Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->get()
         ->groupBy([
             function ($post) {
                 return Carbon::parse($post->published_at)->format('Y');
