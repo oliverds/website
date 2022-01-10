@@ -7,5 +7,11 @@
         <a class="hover:underline hover:text-gray-700 font-medium transition" href="https://github.com/oliverds/">Github</a>
         <span aria-hidden="true"> · </span>
         <a class="hover:underline hover:text-gray-700 font-medium transition" href="/contact">Contact</a>
+        <span aria-hidden="true"> · </span>
+        @if (app()->getLocale() === 'es')
+            <a class="hover:underline hover:text-gray-700 font-medium transition" href="/">English</a>
+        @else
+            <a class="hover:underline hover:text-gray-700 font-medium transition" href="/es">Español</a>
+        @endif
     </p>
 </section>
