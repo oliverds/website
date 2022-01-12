@@ -80,7 +80,25 @@ Route::get('/now', function () {
     return view('now', [
         'years' => $years,
     ]);
-})->name('feed');
+})->name('now');
+
+Route::get('/es/ahora', function () {
+    app()->setLocale('es');
+
+    $years = Post::hasTag('es')->published()->orderBy('published_at', 'desc')->get()
+        ->groupBy([
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('Y');
+            },
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('F');
+            },
+    ]);
+
+    return view('es.now', [
+        'years' => $years,
+    ]);
+})->name('es.now');
 
 Route::get('/contact', function () {
     $years = Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->get()
@@ -96,7 +114,25 @@ Route::get('/contact', function () {
     return view('contact', [
         'years' => $years,
     ]);
-})->name('feed');
+})->name('contact');
+
+Route::get('/es/contacto', function () {
+    app()->setLocale('es');
+
+    $years = Post::hasTag('es')->published()->orderBy('published_at', 'desc')->get()
+        ->groupBy([
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('Y');
+            },
+            function ($post) {
+                return Carbon::parse($post->published_at)->format('F');
+            },
+    ]);
+
+    return view('es.contact', [
+        'years' => $years,
+    ]);
+})->name('contact');
 
 Route::get('/es/{post:slug}', function (Post $post) {
     abort_unless($post->isPublished(), 404);

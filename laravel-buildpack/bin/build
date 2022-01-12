@@ -1,7 +1,3 @@
 #!/usr/bin/env bash
 
 set -eux -o pipefail
-
-php artisan config:cache
-php artisan event:cache
-php artisan view:cache
