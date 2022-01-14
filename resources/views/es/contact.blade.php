@@ -27,7 +27,7 @@ Me encanta conocer gente nueva, por favor envíame un email a hey@oliver.mx con 
 
 **… o sólo sígueme**
 
-Puedes seguirme en [Twitter](https://twitter.com/oliverds_), o mediante mi [RSS](https://oliver.mx/feed/).</x-mito-markdown>
+Puedes seguirme en [Twitter](https://twitter.com/oliverds_), o mediante mi [RSS](https://oliver.mx/es/feed/).</x-mito-markdown>
             </article>
         </section>
 

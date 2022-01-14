@@ -66,6 +66,16 @@ Route::get('/feed', function () {
         ->header('Content-Type', 'text/xml');
 })->name('feed');
 
+Route::get('/es/feed', function () {
+    $content = view('es.feed', [
+        'author' => User::first(),
+        'posts' => Post::hasTag('es')->published()->orderBy('published_at', 'desc')->get(),
+    ]);
+
+    return response($content, 200)
+        ->header('Content-Type', 'text/xml');
+})->name('es.feed');
+
 Route::get('/now', function () {
     $years = Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->get()
         ->groupBy([
