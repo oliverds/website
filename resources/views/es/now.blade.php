@@ -25,7 +25,7 @@
                 <x-mito-markdown class="prose min-w-full" flavor="github">
 **Desarrollador en Yclas**
 
-He sido desarrollador web en [Yclas](https://yclas.com/) for siete años.
+He sido desarrollador web en [Yclas](https://yclas.com/) por siete años.
 
 _Actualizado el 10 de Enero, 2022, desde la Ciudad de México._</x-mito-markdown>
             </article>
