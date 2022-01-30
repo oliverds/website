@@ -196,15 +196,14 @@ Route::get('/es/contacto', function () {
 })->name('contact');
 
 Route::get('/es/{slug}', function ($slug) {
-    $postResponse = cache()->remember("es-posts/{$slug}", now()->addHours(12), function () use ($slug) {
+    $currentPost = cache()->remember("es-posts/{$slug}", now()->addHours(12), function () use ($slug) {
         return Http::withToken(config('services.mito.token'))
             ->acceptJson()
-            ->get("https://api.usemito.com/v1/oliver-es/content/posts/slug/{$slug}");
+            ->get("https://api.usemito.com/v1/oliver-es/content/posts/slug/{$slug}")
+            ->json();
     });
 
-    abort_unless($postResponse->ok(), 404);
-
-    $currentPost = $postResponse->json();
+    abort_if(isset($currentPost['message']), 404);
 
     app()->setLocale('es');
 
@@ -231,15 +230,14 @@ Route::get('/es/{slug}', function ($slug) {
 })->name('es.posts.show');
 
 Route::get('/{slug}', function ($slug) {
-    $postResponse = cache()->remember("posts/{$slug}", now()->addHours(12), function () use ($slug) {
+    $currentPost = cache()->remember("posts/{$slug}", now()->addHours(12), function () use ($slug) {
         return Http::withToken(config('services.mito.token'))
             ->acceptJson()
-            ->get("https://api.usemito.com/v1/oliver/content/posts/slug/{$slug}");
+            ->get("https://api.usemito.com/v1/oliver/content/posts/slug/{$slug}")
+            ->json();
     });
 
-    abort_unless($postResponse->ok(), 404);
-
-    $currentPost = $postResponse->json();
+    abort_if(isset($currentPost['message']), 404);
 
     $posts = cache()->remember('posts', now()->addHours(12), function () {
         return Http::withToken(config('services.mito.token'))
