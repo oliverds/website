@@ -19,9 +19,8 @@ use Olipacks\Mito\Models\Post;
 
 Route::get('/', function () {
     $posts = cache()->remember('posts', now()->addHours(12), function () {
-        return Http::withToken(config('services.mito.token'))
-            ->acceptJson()
-            ->get('https://api.usemito.com/v1/oliver/content/posts')
+        return Http::mito()
+            ->get('/oliver/content/posts')
             ->collect();
     });
 
@@ -46,9 +45,8 @@ Route::get('/es', function () {
     app()->setLocale('es');
 
     $posts = cache()->remember('es-posts', now()->addHours(12), function () {
-        return Http::withToken(config('services.mito.token'))
-            ->acceptJson()
-            ->get('https://api.usemito.com/v1/oliver-es/content/posts')
+        return Http::mito()
+            ->get('/oliver-es/content/posts')
             ->collect();
     });
 
@@ -71,9 +69,8 @@ Route::get('/es', function () {
 
 Route::get('/feed', function () {
     $posts = cache()->remember('posts', now()->addHours(12), function () {
-        return Http::withToken(config('services.mito.token'))
-            ->acceptJson()
-            ->get('https://api.usemito.com/v1/oliver/content/posts')
+        return Http::mito()
+            ->get('/oliver/content/posts')
             ->collect();
     });
 
@@ -88,9 +85,8 @@ Route::get('/feed', function () {
 
 Route::get('/es/feed', function () {
     $posts = cache()->remember('es-posts', now()->addHours(12), function () {
-        return Http::withToken(config('services.mito.token'))
-            ->acceptJson()
-            ->get('https://api.usemito.com/v1/oliver-es/content/posts')
+        return Http::mito()
+            ->get('/oliver-es/content/posts')
             ->collect();
     });
 
@@ -105,9 +101,8 @@ Route::get('/es/feed', function () {
 
 Route::get('/now', function () {
     $posts = cache()->remember('posts', now()->addHours(12), function () {
-        return Http::withToken(config('services.mito.token'))
-            ->acceptJson()
-            ->get('https://api.usemito.com/v1/oliver/content/posts')
+        return Http::mito()
+            ->get('/oliver/content/posts')
             ->collect();
     });
 
@@ -129,9 +124,8 @@ Route::get('/es/ahora', function () {
     app()->setLocale('es');
 
     $posts = cache()->remember('es-posts', now()->addHours(12), function () {
-        return Http::withToken(config('services.mito.token'))
-            ->acceptJson()
-            ->get('https://api.usemito.com/v1/oliver-es/content/posts')
+        return Http::mito()
+            ->get('/oliver-es/content/posts')
             ->collect();
     });
 
@@ -151,9 +145,8 @@ Route::get('/es/ahora', function () {
 
 Route::get('/contact', function () {
     $posts = cache()->remember('posts', now()->addHours(12), function () {
-        return Http::withToken(config('services.mito.token'))
-            ->acceptJson()
-            ->get('https://api.usemito.com/v1/oliver/content/posts')
+        return Http::mito()
+            ->get('/oliver/content/posts')
             ->collect();
     });
 
@@ -175,9 +168,8 @@ Route::get('/es/contacto', function () {
     app()->setLocale('es');
 
     $posts = cache()->remember('es-posts', now()->addHours(12), function () {
-        return Http::withToken(config('services.mito.token'))
-            ->acceptJson()
-            ->get('https://api.usemito.com/v1/oliver-es/content/posts')
+        return Http::mito()
+            ->get('/oliver-es/content/posts')
             ->collect();
     });
 
@@ -197,9 +189,8 @@ Route::get('/es/contacto', function () {
 
 Route::get('/es/{slug}', function ($slug) {
     $currentPost = cache()->remember("es-posts/{$slug}", now()->addHours(12), function () use ($slug) {
-        return Http::withToken(config('services.mito.token'))
-            ->acceptJson()
-            ->get("https://api.usemito.com/v1/oliver-es/content/posts/slug/{$slug}")
+        return Http::mito()
+            ->get("/oliver-es/content/posts/slug/{$slug}")
             ->json();
     });
 
@@ -208,9 +199,8 @@ Route::get('/es/{slug}', function ($slug) {
     app()->setLocale('es');
 
     $posts = cache()->remember('es-posts', now()->addHours(12), function () {
-        return Http::withToken(config('services.mito.token'))
-            ->acceptJson()
-            ->get('https://api.usemito.com/v1/oliver-es/content/posts')
+        return Http::mito()
+            ->get('/oliver-es/content/posts')
             ->collect();
     });
 
@@ -231,18 +221,16 @@ Route::get('/es/{slug}', function ($slug) {
 
 Route::get('/{slug}', function ($slug) {
     $currentPost = cache()->remember("posts/{$slug}", now()->addHours(12), function () use ($slug) {
-        return Http::withToken(config('services.mito.token'))
-            ->acceptJson()
-            ->get("https://api.usemito.com/v1/oliver/content/posts/slug/{$slug}")
+        return Http::mito()
+            ->get("/oliver/content/posts/slug/{$slug}")
             ->json();
     });
 
     abort_if(isset($currentPost['message']), 404);
 
     $posts = cache()->remember('posts', now()->addHours(12), function () {
-        return Http::withToken(config('services.mito.token'))
-            ->acceptJson()
-            ->get('https://api.usemito.com/v1/oliver/content/posts')
+        return Http::mito()
+            ->get('/oliver/content/posts')
             ->collect();
     });
 
