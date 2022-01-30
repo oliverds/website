@@ -37,16 +37,16 @@
             <hr class="h-px border-0 bg-gradient-to-r from-gray-50 via-gray-300 to-gray-50 mt-12">
 
             <p class="text-xs lg:text-sm uppercase tracking-wide font-semibold text-gray-900 mt-12">
-                <time datetime="{{ $latestPost->published_at->format('Y-m-d') }}">{{ $latestPost->published_at->format('F j, Y') }}</time>
+                <time datetime="{{ Carbon\Carbon::parse($latestPost['published_at'])->format('Y-m-d') }}">{{ Carbon\Carbon::parse($latestPost['published_at'])->format('F j, Y') }}</time>
             </p>
 
             <h1 class="text-xl lg:text-3xl font-bold leading-none mt-2 text-gray-900">
-                {{ $latestPost->title }}
+                {{ $latestPost['title'] }}
             </h1>
 
             <section class="mt-12">
                 <article>
-                    <x-markdown class="prose min-w-full" flavor="github">{!! $latestPost->markdown_without_title !!}</x-markdown>
+                    <x-markdown class="prose min-w-full" flavor="github">{!! $latestPost['markdown_without_title'] !!}</x-markdown>
                 </article>
             </section>
         @endif
@@ -63,12 +63,12 @@
                      <time class="ml-auto">{{ $month }}</time>
                     </h3>
                  @foreach ($posts as $post)
-                        <a href="{{ route('es.posts.show', $post) }}" class="flex items-baseline text-base lg:text-xl leading-6 lg:leading-9 text-gray-600 hover:text-gray-900 transition">
+                        <a href="{{ route('es.posts.show', ['slug' => $post['slug']]) }}" class="flex items-baseline text-base lg:text-xl leading-6 lg:leading-9 text-gray-600 hover:text-gray-900 transition">
                             <p class="flex-initial overflow-hidden overflow-ellipsis whitespace-nowrap">
-                                {{ $post->title }}
+                                {{ $post['title'] }}
                             </p>
                             <hr class="flex-1 border-dotted mx-3 lg:mx-5 border-gray-300">
-                            <time class="flex-initial whitespace-nowrap" datetime="{{ $post->published_at->format('Y-m-d') }}">{{ $post->published_at->format('jS') }}</time>
+                            <time class="flex-initial whitespace-nowrap" datetime="{{ Carbon\Carbon::parse($post['published_at'])->format('Y-m-d') }}">{{ Carbon\Carbon::parse($post['published_at'])->format('jS') }}</time>
                         </a>
                     @endforeach
                 @endforeach

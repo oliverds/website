@@ -2,6 +2,7 @@
 
 use App\Models\User;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use Olipacks\Mito\Models\Post;
 
@@ -17,16 +18,22 @@ use Olipacks\Mito\Models\Post;
 */
 
 Route::get('/', function () {
-    $latestPost = Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->first();
+    $posts = cache()->remember('posts', now()->addHours(12), function () {
+        return Http::withToken(config('services.mito.token'))
+            ->acceptJson()
+            ->get('https://api.usemito.com/v1/oliver/content/posts')
+            ->collect();
+    });
 
-    $years = Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->get()
-        ->groupBy([
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('Y');
-            },
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('F');
-            },
+    $latestPost = $posts->first();
+
+    $years = $posts->groupBy([
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('Y');
+        },
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('F');
+        },
     ]);
 
     return view('home', [
@@ -38,16 +45,22 @@ Route::get('/', function () {
 Route::get('/es', function () {
     app()->setLocale('es');
 
-    $latestPost = Post::hasTag('es')->published()->orderBy('published_at', 'desc')->first();
+    $posts = cache()->remember('es-posts', now()->addHours(12), function () {
+        return Http::withToken(config('services.mito.token'))
+            ->acceptJson()
+            ->get('https://api.usemito.com/v1/oliver-es/content/posts')
+            ->collect();
+    });
 
-    $years = Post::hasTag('es')->published()->orderBy('published_at', 'desc')->get()
-        ->groupBy([
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('Y');
-            },
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('F');
-            },
+    $latestPost = $posts->first();
+
+    $years = $posts->groupBy([
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('Y');
+        },
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('F');
+        },
     ]);
 
     return view('es.home', [
@@ -57,9 +70,16 @@ Route::get('/es', function () {
 })->name('es.home');
 
 Route::get('/feed', function () {
+    $posts = cache()->remember('posts', now()->addHours(12), function () {
+        return Http::withToken(config('services.mito.token'))
+            ->acceptJson()
+            ->get('https://api.usemito.com/v1/oliver/content/posts')
+            ->collect();
+    });
+
     $content = view('feed', [
         'author' => User::first(),
-        'posts' => Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->get(),
+        'posts' => $posts,
     ]);
 
     return response($content, 200)
@@ -67,9 +87,16 @@ Route::get('/feed', function () {
 })->name('feed');
 
 Route::get('/es/feed', function () {
+    $posts = cache()->remember('es-posts', now()->addHours(12), function () {
+        return Http::withToken(config('services.mito.token'))
+            ->acceptJson()
+            ->get('https://api.usemito.com/v1/oliver-es/content/posts')
+            ->collect();
+    });
+
     $content = view('es.feed', [
         'author' => User::first(),
-        'posts' => Post::hasTag('es')->published()->orderBy('published_at', 'desc')->get(),
+        'posts' => $posts,
     ]);
 
     return response($content, 200)
@@ -77,14 +104,20 @@ Route::get('/es/feed', function () {
 })->name('es.feed');
 
 Route::get('/now', function () {
-    $years = Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->get()
-        ->groupBy([
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('Y');
-            },
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('F');
-            },
+    $posts = cache()->remember('posts', now()->addHours(12), function () {
+        return Http::withToken(config('services.mito.token'))
+            ->acceptJson()
+            ->get('https://api.usemito.com/v1/oliver/content/posts')
+            ->collect();
+    });
+
+    $years = $posts->groupBy([
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('Y');
+        },
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('F');
+        },
     ]);
 
     return view('now', [
@@ -95,14 +128,20 @@ Route::get('/now', function () {
 Route::get('/es/ahora', function () {
     app()->setLocale('es');
 
-    $years = Post::hasTag('es')->published()->orderBy('published_at', 'desc')->get()
-        ->groupBy([
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('Y');
-            },
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('F');
-            },
+    $posts = cache()->remember('es-posts', now()->addHours(12), function () {
+        return Http::withToken(config('services.mito.token'))
+            ->acceptJson()
+            ->get('https://api.usemito.com/v1/oliver-es/content/posts')
+            ->collect();
+    });
+
+    $years = $posts->groupBy([
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('Y');
+        },
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('F');
+        },
     ]);
 
     return view('es.now', [
@@ -111,14 +150,20 @@ Route::get('/es/ahora', function () {
 })->name('es.now');
 
 Route::get('/contact', function () {
-    $years = Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->get()
-        ->groupBy([
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('Y');
-            },
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('F');
-            },
+    $posts = cache()->remember('posts', now()->addHours(12), function () {
+        return Http::withToken(config('services.mito.token'))
+            ->acceptJson()
+            ->get('https://api.usemito.com/v1/oliver/content/posts')
+            ->collect();
+    });
+
+    $years = $posts->groupBy([
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('Y');
+        },
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('F');
+        },
     ]);
 
     return view('contact', [
@@ -129,14 +174,20 @@ Route::get('/contact', function () {
 Route::get('/es/contacto', function () {
     app()->setLocale('es');
 
-    $years = Post::hasTag('es')->published()->orderBy('published_at', 'desc')->get()
-        ->groupBy([
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('Y');
-            },
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('F');
-            },
+    $posts = cache()->remember('es-posts', now()->addHours(12), function () {
+        return Http::withToken(config('services.mito.token'))
+            ->acceptJson()
+            ->get('https://api.usemito.com/v1/oliver-es/content/posts')
+            ->collect();
+    });
+
+    $years = $posts->groupBy([
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('Y');
+        },
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('F');
+        },
     ]);
 
     return view('es.contact', [
@@ -144,48 +195,70 @@ Route::get('/es/contacto', function () {
     ]);
 })->name('contact');
 
-Route::get('/es/{post:slug}', function (Post $post) {
-    abort_unless($post->isPublished(), 404);
+Route::get('/es/{slug}', function ($slug) {
+    $postResponse = cache()->remember("es-posts/{$slug}", now()->addHours(12), function () use ($slug) {
+        return Http::withToken(config('services.mito.token'))
+            ->acceptJson()
+            ->get("https://api.usemito.com/v1/oliver-es/content/posts/slug/{$slug}");
+    });
 
-    abort_unless($post->tags->pluck('slug')->contains('es'), 404);
+    abort_unless($postResponse->ok(), 404);
+
+    $currentPost = $postResponse->json();
 
     app()->setLocale('es');
 
-    Carbon::setlocale(app()->getLocale());
+    $posts = cache()->remember('es-posts', now()->addHours(12), function () {
+        return Http::withToken(config('services.mito.token'))
+            ->acceptJson()
+            ->get('https://api.usemito.com/v1/oliver-es/content/posts')
+            ->collect();
+    });
 
-    $years = Post::hasTag('es')->published()->orderBy('published_at', 'desc')->get()
-        ->groupBy([
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('Y');
-            },
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('F');
-            },
+    $years = $posts->groupBy([
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('Y');
+        },
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('F');
+        },
     ]);
 
     return view('es.post', [
         'years' => $years,
-        'post' => $post,
+        'currentPost' => $currentPost,
     ]);
 })->name('es.posts.show');
 
-Route::get('/{post:slug}', function (Post $post) {
-    abort_unless($post->isPublished(), 404);
+Route::get('/{slug}', function ($slug) {
+    $postResponse = cache()->remember("posts/{$slug}", now()->addHours(12), function () use ($slug) {
+        return Http::withToken(config('services.mito.token'))
+            ->acceptJson()
+            ->get("https://api.usemito.com/v1/oliver/content/posts/slug/{$slug}");
+    });
 
-    abort_unless($post->tags->pluck('slug')->doesntContain('es'), 404);
+    abort_unless($postResponse->ok(), 404);
 
-    $years = Post::doesntHaveTag('es')->published()->orderBy('published_at', 'desc')->get()
-        ->groupBy([
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('Y');
-            },
-            function ($post) {
-                return Carbon::parse($post->published_at)->format('F');
-            },
+    $currentPost = $postResponse->json();
+
+    $posts = cache()->remember('posts', now()->addHours(12), function () {
+        return Http::withToken(config('services.mito.token'))
+            ->acceptJson()
+            ->get('https://api.usemito.com/v1/oliver/content/posts')
+            ->collect();
+    });
+
+    $years = $posts->groupBy([
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('Y');
+        },
+        function ($post) {
+            return Carbon::parse($post['published_at'])->format('F');
+        },
     ]);
 
     return view('post', [
         'years' => $years,
-        'post' => $post,
+        'currentPost' => $currentPost,
     ]);
 })->name('posts.show');

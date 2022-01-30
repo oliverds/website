@@ -1,11 +1,11 @@
-<x-layout :title="$post->title">
+<x-layout :title="$currentPost['title']">
     <x-slot name="head">
         <link rel="apple-touch-icon" sizes="300x300" href="{{ asset('/img/profile_photo.jpg') }}">
         <link rel="icon" type="image/png" sizes="300x300" href="{{ asset('/img/profile_photo.jpg') }}">
 
         <x-social-meta
-            :title="$post->title"
-            :description="$post->excerpt"
+            :title="$currentPost['title']"
+            :description="$currentPost['excerpt']"
             :image="asset('/img/profile_photo.jpg')"
             type="article"
             card="summary"
@@ -18,16 +18,16 @@
         @include('_header')
 
         <p class="text-xs lg:text-sm uppercase tracking-wide font-semibold text-gray-900 mt-12">
-            <time datetime="{{ $post->published_at->format('Y-m-d') }}">{{ $post->published_at->format('F j, Y') }}</time>
+            <time datetime="{{ Carbon\Carbon::parse($currentPost['published_at'])->format('Y-m-d') }}">{{ Carbon\Carbon::parse($currentPost['published_at'])->format('F j, Y') }}</time>
         </p>
 
         <h2 class="text-xl lg:text-3xl font-bold leading-none mt-2 text-gray-900">
-            {{ $post->title }}
+            {{ $currentPost['title'] }}
         </h2>
 
         <section class="mt-12">
             <article>
-                <x-markdown class="prose min-w-full" flavor="github">{!! $post->markdown_without_title !!}</x-markdown>
+                <x-markdown class="prose min-w-full" flavor="github">{!! $currentPost['markdown_without_title'] !!}</x-markdown>
             </article>
         </section>
 
@@ -43,12 +43,12 @@
                      <time class="ml-auto">{{ $month }}</time>
                     </h3>
                  @foreach ($posts as $post)
-                        <a href="{{ route('es.posts.show', $post) }}" class="flex items-baseline text-base lg:text-xl leading-6 lg:leading-9 text-gray-600 hover:text-gray-900 transition">
+                        <a href="{{ route('es.posts.show', ['slug' => $post['slug']]) }}" class="flex items-baseline text-base lg:text-xl leading-6 lg:leading-9 text-gray-600 hover:text-gray-900 transition">
                             <p class="flex-initial overflow-hidden overflow-ellipsis whitespace-nowrap">
-                                {{ $post->title }}
+                                {{ $post['title'] }}
                             </p>
                             <hr class="flex-1 border-dotted mx-3 lg:mx-5 border-gray-300">
-                            <time class="flex-initial whitespace-nowrap" datetime="{{ $post->published_at->format('Y-m-d') }}">{{ $post->published_at->format('jS') }}</time>
+                            <time class="flex-initial whitespace-nowrap" datetime="{{ Carbon\Carbon::parse($post['published_at'])->format('Y-m-d') }}">{{ Carbon\Carbon::parse($post['published_at'])->format('jS') }}</time>
                         </a>
                     @endforeach
                 @endforeach

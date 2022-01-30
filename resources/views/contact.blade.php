@@ -43,12 +43,12 @@ You can follow me using [Twitter](https://twitter.com/oliverds_), or [RSS](https
                      <time class="ml-auto">{{ $month }}</time>
                     </h3>
                  @foreach ($posts as $post)
-                        <a href="{{ route('posts.show', $post) }}" class="flex items-baseline text-base lg:text-xl leading-6 lg:leading-9 text-gray-600 hover:text-gray-900 transition">
+                        <a href="{{ route('posts.show', ['slug' => $post['slug']]) }}" class="flex items-baseline text-base lg:text-xl leading-6 lg:leading-9 text-gray-600 hover:text-gray-900 transition">
                             <p class="flex-initial overflow-hidden overflow-ellipsis whitespace-nowrap">
-                                {{ $post->title }}
+                                {{ $post['title'] }}
                             </p>
                             <hr class="flex-1 border-dotted mx-3 lg:mx-5 border-gray-300">
-                            <time class="flex-initial whitespace-nowrap" datetime="{{ $post->published_at->format('Y-m-d') }}">{{ $post->published_at->format('jS') }}</time>
+                            <time class="flex-initial whitespace-nowrap" datetime="{{ Carbon\Carbon::parse($post['published_at'])->format('Y-m-d') }}">{{ Carbon\Carbon::parse($post['published_at'])->format('jS') }}</time>
                         </a>
                     @endforeach
                 @endforeach

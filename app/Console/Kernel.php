@@ -24,7 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('mito:publish-scheduled-posts')->everyMinute();
+        // $schedule->command('inspire')->hourly();
     }
 
     /**

@@ -30,4 +30,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'mito' => [
+        'token' => env('MITO_TOKEN'),
+    ],
+
 ];
