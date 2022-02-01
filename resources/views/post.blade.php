@@ -10,6 +10,10 @@
             type="article"
             card="summary"
         />
+
+        @if ($currentPost['meta'] && isset($currentPost['meta']['codeinjection_head']))
+            {!! $currentPost['meta']['codeinjection_head'] !!}
+        @endif
     </x-slot>
 
     <x-switch-language />
