@@ -226,6 +226,8 @@ Route::get('/{slug}', function ($slug) {
             ->json();
     });
 
+    abort_unless(isset($currentPost), 404);
+
     abort_if(isset($currentPost['message']), 404);
 
     $posts = cache()->remember('posts', now()->addHours(12), function () {
