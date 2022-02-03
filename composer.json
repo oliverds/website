@@ -16,7 +16,6 @@
         "livewire/livewire": "^2.7",
         "olipacks/mito": "dev-main",
         "olipacks/volante": "dev-main",
-        "spatie/laravel-ray": "^1.27",
         "torchlight/torchlight-commonmark": "^0.5.2"
     },
     "require-dev": {
@@ -28,7 +27,8 @@
         "pestphp/pest": "^1.20",
         "pestphp/pest-plugin-laravel": "^1.1",
         "phpunit/phpunit": "^9.3.3",
-        "spatie/pest-plugin-snapshots": "^1.1"
+        "spatie/pest-plugin-snapshots": "^1.1",
+        "spatie/laravel-ray": "^1.27"
     },
     "autoload": {
         "psr-4": {
