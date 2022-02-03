@@ -11,9 +11,7 @@
             card="summary"
         />
 
-        @if ($currentPost['meta'] && isset($currentPost['meta']['codeinjection_head']))
-            {!! $currentPost['meta']['codeinjection_head'] !!}
-        @endif
+        {!! $currentPost['codeinjection_head'] ?? '' !!}
     </x-slot>
 
     <x-switch-language />

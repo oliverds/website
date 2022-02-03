@@ -10,6 +10,8 @@
             type="article"
             card="summary"
         />
+
+        {!! $currentPost['codeinjection_head'] ?? '' !!}
     </x-slot>
 
     <x-switch-language />
