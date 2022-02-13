@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
         Http::macro('mito', function () {
             return Http::withToken(config('services.mito.token'))
                 ->acceptJson()
-                ->baseUrl('https://usemito.com/api/v1');
+                ->baseUrl('https://usamito.com/api/v1');
         });
     }
 }
