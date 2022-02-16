@@ -29,7 +29,8 @@
         "pestphp/pest-plugin-laravel": "^1.1",
         "phpunit/phpunit": "^9.3.3",
         "spatie/pest-plugin-snapshots": "^1.1",
-        "spatie/laravel-ray": "^1.27"
+        "spatie/laravel-ray": "^1.27",
+        "radiocubito/deployer-stubs": "dev-main"
     },
     "autoload": {
         "psr-4": {
@@ -78,8 +79,12 @@
     "prefer-stable": true,
     "repositories": [
         {
-            "type": "vcs",
+            "type": "git",
             "url": "https://github.com/volantephp/volante.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/radiocubito/deployer-stubs"
         }
     ]
 }

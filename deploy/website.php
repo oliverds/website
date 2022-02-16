@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Deployer;
 
@@ -24,11 +26,10 @@ task('provision:website', function () {
     cd($deployPath);
 
     run("[ -d log ] || mkdir log");
-    // asks sudo password
-    // run("chgrp caddy log");
+    run("sudo chgrp caddy log");
 
     $caddyfile = <<<EOF
-$domain
+$domain {
 
 root * $deployPath/current/$publicPath
 file_server
@@ -48,6 +49,7 @@ handle_errors {
 \tfile_server {
 \t\troot /var/dep/html
 \t}
+}
 }
 EOF;
 
@@ -70,9 +72,13 @@ EOF;
         run("echo $'$caddyfile' > Caddyfile");
     }
 
-    info("Website $domain configured!");
+    run("sudo bash -c 'echo \"import $deployPath/Caddyfile\" >> /etc/caddy/Caddyfile'");
+    cd("/etc/caddy");
+    run("caddy reload");
 
-    warning("Remember to run: sudo chgrp caddy {{deploy_path}}/log && echo '$deployPath/Caddyfile' >> /etc/caddy/Caddyfile && cd /etc/caddy && caddy reload");
+    set('remote_user', 'root');
+
+    info("Website $domain configured!");
 })->limit(1);
 
 desc('Shows caddy logs');

@@ -2,10 +2,11 @@ import:
   - recipe/laravel.php
   - contrib/crontab.php
   - contrib/npm.php
+  - deploy/provision.php
   - deploy/website.php
 
 config:
-  application: 'oliver.mx'
+  application: 'oliverds-website'
   repository: 'git@github.com:oliverds/oliver.mx.git'
   branch: 'master'
   http_user: forge
@@ -13,29 +14,10 @@ config:
 
 hosts:
   production:
-    hostname: 216.238.80.135
+    hostname: 'reflex.radiocubito.com'
     deploy_path: '~/oliver.mx'
 
 tasks:
-  provision:
-    - provision:check
-    - provision:configure
-    - provision:update
-    - provision:upgrade
-    - provision:install
-    - provision:ssh
-    - provision:firewall
-    - provision:deployer
-    - provision:server
-    - provision:php
-    - provision:php-extra
-    - provision:databases
-    - provision:redis
-    - provision:supervisor
-    - provision:composer
-    - provision:npm
-    - provision:website
-    - provision:verify
   deploy:
     - deploy:prepare
     - deploy:vendors
