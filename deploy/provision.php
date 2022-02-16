@@ -83,3 +83,46 @@ task('provision:opcache', function () {
     run('sed -i "s/;opcache.validate_timestamps=1/opcache.validate_timestamps = 0/" /etc/php/8.1/fpm/php.ini');
     run('sed -i "s/;opcache.save_comments=1/opcache.save_comments = 1/" /etc/php/8.1/fpm/php.ini');
 })->oncePerNode()->verbose();
+
+desc('Add SSH key');
+task('provision:ssh:key', function () {
+    $key = ask(' SSH key: ');
+
+    run('echo "$KEY" >> /root/.ssh/authorized_keys', ['env' => ['KEY' => $key]]);
+    run('cp /root/.ssh/authorized_keys /home/forge/.ssh/authorized_keys');
+})->oncePerNode()->verbose();
+
+desc('Shows nginx error logs');
+task('logs:nginx:error', function () {
+    run('sudo tail -f /var/log/nginx/error.log');
+})->verbose();
+
+desc('Shows nginx access logs');
+task('logs:nginx:access', function () {
+    run('sudo tail -f /var/log/nginx/access.log');
+})->verbose();
+
+desc('Shows php logs');
+task('logs:php', function () {
+    run('sudo tail -f /var/log/php8.1-fpm.log');
+})->verbose();
+
+desc('Shows php logs');
+task('logs:php', function () {
+    run('sudo tail -f /var/log/php8.1-fpm.log');
+})->verbose();
+
+desc('Shows mysql logs');
+task('logs:mysql', function () {
+    run('sudo tail -f /var/log/mysql/error.log');
+})->verbose();
+
+desc('Shows redis logs');
+task('logs:redis', function () {
+    run('sudo tail -f /var/log/redis/redis-server.log');
+})->verbose();
+
+desc('Shows ssh auth logs');
+task('logs:ssh:auth', function () {
+    run('sudo tail -f /var/log/auth.log');
+})->verbose();

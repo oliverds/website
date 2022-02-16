@@ -114,16 +114,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.209.24",
+            "version": "3.209.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ce68bfc141863a25f4b870f10cfa996312fb1813"
+                "reference": "9f1ae9b3efd1261b7205d79484fc3a3802328667"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ce68bfc141863a25f4b870f10cfa996312fb1813",
-                "reference": "ce68bfc141863a25f4b870f10cfa996312fb1813",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9f1ae9b3efd1261b7205d79484fc3a3802328667",
+                "reference": "9f1ae9b3efd1261b7205d79484fc3a3802328667",
                 "shasum": ""
             },
             "require": {
@@ -199,9 +199,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.24"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.25"
             },
-            "time": "2022-02-14T19:15:07+00:00"
+            "time": "2022-02-16T19:18:09+00:00"
         },
         {
             "name": "brick/math",
@@ -1236,16 +1236,16 @@
         },
         {
             "name": "honeybadger-io/honeybadger-laravel",
-            "version": "v3.13.0",
+            "version": "v3.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/honeybadger-io/honeybadger-laravel.git",
-                "reference": "7e9e2f904fedd69e0aa5e6184e4daf1fb595e201"
+                "reference": "92e6bc69e4f09e8e70731bc609c737e03eeb8fc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/honeybadger-io/honeybadger-laravel/zipball/7e9e2f904fedd69e0aa5e6184e4daf1fb595e201",
-                "reference": "7e9e2f904fedd69e0aa5e6184e4daf1fb595e201",
+                "url": "https://api.github.com/repos/honeybadger-io/honeybadger-laravel/zipball/92e6bc69e4f09e8e70731bc609c737e03eeb8fc7",
+                "reference": "92e6bc69e4f09e8e70731bc609c737e03eeb8fc7",
                 "shasum": ""
             },
             "require": {
@@ -1255,7 +1255,7 @@
                 "illuminate/support": "^7.0|^8.0|^9.0",
                 "monolog/monolog": "^2.0",
                 "php": "^7.2|^8.0",
-                "sixlive/dotenv-editor": "^1.1"
+                "sixlive/dotenv-editor": "^1.1|^2.0"
             },
             "require-dev": {
                 "larapack/dd": "^1.0",
@@ -1304,9 +1304,9 @@
             ],
             "support": {
                 "issues": "https://github.com/honeybadger-io/honeybadger-laravel/issues",
-                "source": "https://github.com/honeybadger-io/honeybadger-laravel/tree/v3.13.0"
+                "source": "https://github.com/honeybadger-io/honeybadger-laravel/tree/v3.13.1"
             },
-            "time": "2022-01-22T11:42:09+00:00"
+            "time": "2022-02-16T14:14:43+00:00"
         },
         {
             "name": "honeybadger-io/honeybadger-php",
@@ -4062,24 +4062,25 @@
         },
         {
             "name": "sixlive/dotenv-editor",
-            "version": "v1.3.0",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sixlive/dotenv-editor.git",
-                "reference": "8fe8695962cbf1462dca903d1455054e66bae5e4"
+                "reference": "c13a1a043887a5c61079bb98dfa32e0583f4aa52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sixlive/dotenv-editor/zipball/8fe8695962cbf1462dca903d1455054e66bae5e4",
-                "reference": "8fe8695962cbf1462dca903d1455054e66bae5e4",
+                "url": "https://api.github.com/repos/sixlive/dotenv-editor/zipball/c13a1a043887a5c61079bb98dfa32e0583f4aa52",
+                "reference": "c13a1a043887a5c61079bb98dfa32e0583f4aa52",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1|^8.0"
+                "php": "^8.0"
             },
             "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.2",
                 "larapack/dd": "^1.0",
-                "phpunit/phpunit": "^7.0|^8.0|^9.0"
+                "phpunit/phpunit": "^9.0"
             },
             "type": "library",
             "autoload": {
@@ -4108,9 +4109,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sixlive/dotenv-editor/issues",
-                "source": "https://github.com/sixlive/dotenv-editor/tree/v1.3.0"
+                "source": "https://github.com/sixlive/dotenv-editor/tree/v2.0.0"
             },
-            "time": "2020-11-29T13:42:53+00:00"
+            "time": "2021-11-15T13:52:36+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",
@@ -4236,16 +4237,16 @@
         },
         {
             "name": "stevebauman/location",
-            "version": "v6.3.0",
+            "version": "v6.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stevebauman/location.git",
-                "reference": "436fa4b4ba3a1b0c459fb06eefeca5cbdec35e4c"
+                "reference": "e1fdd754b1937252527d77927cd545b1fc38e6e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stevebauman/location/zipball/436fa4b4ba3a1b0c459fb06eefeca5cbdec35e4c",
-                "reference": "436fa4b4ba3a1b0c459fb06eefeca5cbdec35e4c",
+                "url": "https://api.github.com/repos/stevebauman/location/zipball/e1fdd754b1937252527d77927cd545b1fc38e6e2",
+                "reference": "e1fdd754b1937252527d77927cd545b1fc38e6e2",
                 "shasum": ""
             },
             "require": {
@@ -4297,9 +4298,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stevebauman/location/issues",
-                "source": "https://github.com/stevebauman/location/tree/v6.3.0"
+                "source": "https://github.com/stevebauman/location/tree/v6.3.1"
             },
-            "time": "2022-02-09T04:01:32+00:00"
+            "time": "2022-02-16T13:52:28+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -7998,12 +7999,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Pest\\Laravel\\": "src/"
-                },
                 "files": [
                     "src/Autoload.php"
-                ]
+                ],
+                "psr-4": {
+                    "Pest\\Laravel\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8856,7 +8857,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/radiocubito/deployer-stubs",
-                "reference": "34cc794496fb2369dbc149292b7846079edd06e9"
+                "reference": "8a65b76215a212f3431a3a3a7dbaa1b1887f832f"
             },
             "require": {
                 "deployer/dist": "^7.0",
@@ -8915,7 +8916,7 @@
                 "deployer-stubs",
                 "radiocubito"
             ],
-            "time": "2022-02-16T13:47:19+00:00"
+            "time": "2022-02-16T23:35:10+00:00"
         },
         {
             "name": "sebastian/cli-parser",
