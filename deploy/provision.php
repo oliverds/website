@@ -37,10 +37,10 @@ desc('Inital setup');
 task('provision:setup', function () {
     run('touch /root/forge.sh');
     run('echo "$KEY" >> /root/forge.sh', ['env' => ['KEY' => file_get_contents(__DIR__ . '/forge.sh')]]);
-    run('sed -i "s/::hostname::/' . get('hostname'). '/" /root/forge.sh');
-    run('sed -i "s/::ip_address::/' . get('ip_address'). '/" /root/forge.sh');
-    run('sed -i "s/::sudo_password::/' . get('sudo_password'). '/" /root/forge.sh');
-    run('sed -i "s/::database_password::/' . get('database_password'). '/" /root/forge.sh');
+    run('sed -i "s/::hostname::/' . get('hostname'). '/g" /root/forge.sh');
+    run('sed -i "s/::ip_address::/' . get('ip_address'). '/g" /root/forge.sh');
+    run('sed -i "s/::sudo_password::/' . get('sudo_password'). '/g" /root/forge.sh');
+    run('sed -i "s/::database_password::/' . get('database_password'). '/g" /root/forge.sh');
     run('bash forge.sh', ['timeout' => null, "real_time_output" => true]);
 
     if (!empty(get('ssh_copy_id'))) {
